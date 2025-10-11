@@ -1,484 +1,133 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO and Meta Tags -->
-    <title data-translate-key="meta_title_de">Gewinne ein iPhone 17 Pro oder einen 500€ Amazon-Gutschein</title>
-    <meta name="description" data-translate-key="meta_desc_de" content="Nimm an unserem exklusiven Gewinnspiel teil und sichere dir die Chance auf ein brandneues iPhone 17 Pro oder einen 500€ Amazon-Gutschein. Nur für kurze Zeit!">
-    <meta name="keywords" data-translate-key="meta_keywords_de" content="gewinnspiel, iphone 17 pro, amazon gutschein, cpa, giveaway, verlosung, kostenlos teilnehmen">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gethu.tech/">
-    <meta property="og:title" data-translate-key="og_title_de" content="Exklusives Gewinnspiel: iPhone 17 Pro oder 500€ Amazon-Gutschein!">
-    <meta property="og:description" data-translate-key="og_desc_de" content="Drei einfache Schritte, um am Gewinnspiel teilzunehmen. Wähle deinen Preis und nimm jetzt teil!">
-    <meta property="og:image" content="https://i.postimg.cc/K4TwY3WC/prores-da2ay2urzh4y-large.png">
-    <meta property="og:locale" content="de_DE">
-    <meta property="og:locale:alternate" content="en_US">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://gethu.tech/">
-    <meta name="twitter:title" data-translate-key="twitter_title_de" content="Gewinne ein iPhone 17 Pro oder einen 500€ Amazon-Gutschein">
-    <meta name="twitter:description" data-translate-key="twitter_desc_de" content="Nimm an unserem exklusiven Gewinnspiel teil. Wähle deinen Preis und nimm jetzt teil!">
-    <meta name="twitter:image" content="https://i.postimg.cc/K4TwY3WC/prores-da2ay2urzh4y-large.png">
-    
-    <!-- Scripts and Styles -->
+    <title>Unlock Your FREE ChatGPT Plus Subscription!</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
-        /* Custom Styles */
-        :root {
-            --background-start-rgb: 10, 10, 10;
-            --background-end-rgb: 23, 16, 41;
-            --glow-color-1: rgb(139, 92, 246);
-            --glow-color-2: rgb(255, 153, 0);
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0A0A0A;
-            color: #E5E7EB;
         }
-        
-        .aurora-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: -1;
+        .glow-icon {
+            filter: drop-shadow(0 0 15px rgba(29, 78, 216, 0.7)) drop-shadow(0 0 5px rgba(29, 78, 216, 0.5));
         }
-
-        .aurora-background::before, .aurora-background::after {
-            content: '';
-            position: absolute;
-            width: 800px;
-            height: 800px;
-            background-image: radial-gradient(circle, var(--glow-color-1) 0%, transparent 60%);
-            border-radius: 50%;
-            opacity: 0.15;
-            filter: blur(100px);
-            will-change: transform;
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5), 0 0 5px rgba(59, 130, 246, 0.3);
         }
-        
-        .aurora-background::before {
-            top: -20%;
-            left: -20%;
-            animation: rotate 25s linear infinite;
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.7), 0 0 10px rgba(59, 130, 246, 0.5);
         }
-
-        .aurora-background::after {
-            bottom: -20%;
-            right: -20%;
-            background-image: radial-gradient(circle, var(--glow-color-2) 0%, transparent 60%);
-            animation: rotate 30s linear infinite reverse;
+        .gradient-bg {
+            background: radial-gradient(circle at center, rgba(17, 24, 39, 0) 0%, #111827 70%);
         }
-        
-        .main-card-3d {
-            transform-style: preserve-3d;
-            transform: rotateY(-10deg) rotateX(10deg) scale(0.95);
-            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            box-shadow: 0 50px 100px -20px rgba(0,0,0,0.4);
+        .neural-bg {
+            background-image:
+                radial-gradient(circle at 10% 20%, rgba(29, 78, 216, 0.1) 0, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(59, 130, 246, 0.1) 0, transparent 40%);
         }
-        .main-card-3d:hover {
-            transform: rotateY(0) rotateX(0) scale(1);
-        }
-
-        /* 3D Button Styles */
-        .btn-3d {
-            position: relative;
-            border: none;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            will-change: transform, box-shadow;
-            transform-style: preserve-3d;
-            border-radius: 0.75rem; /* 12px */
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            display: block; /* Ensure anchor tags behave like buttons */
-        }
-        .btn-3d span {
-            display: block;
-            position: relative;
-            z-index: 1;
-            padding: 1rem 1.5rem;
-            border-radius: 0.75rem;
-            background: linear-gradient(rgba(255,255,255,0.05), rgba(255,255,255,0));
-        }
-
-        .btn-3d::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 0.75rem;
-            transform: translateZ(-1px) translateY(6px); /* Increased depth */
-            transition: transform 0.2s ease, background-color 0.2s ease;
-        }
-        .btn-3d:hover { transform: translateY(-3px); }
-        .btn-3d:active { transform: translateY(3px); } /* More realistic press */
-
-        /* Amazon Button */
-        .btn-amazon { background-color: #FF9900; color: #131921; }
-        .btn-amazon::before { background-color: #CC7A00; }
-        .btn-amazon:hover { box-shadow: 0 10px 25px rgba(255, 153, 0, 0.2); }
-        
-        /* iPhone Button */
-        .btn-iphone { background-color: #8B5CF6; color: white; }
-        .btn-iphone::before { background-color: #6D28D9; }
-        .btn-iphone:hover { box-shadow: 0 10px 25px rgba(139, 92, 246, 0.2); }
-        
-        /* Contact Button */
-        .btn-contact { background-color: rgba(31, 41, 55, 0.5); color: white; backdrop-filter: blur(5px); }
-        .btn-contact::before { background-color: #111827; }
-        .btn-contact:hover { box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
-
-        /* 3D iPhone Image Style */
-        .iphone-3d-image {
-            filter: drop-shadow(0px 30px 50px rgba(0, 0, 0, 0.4));
-            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease-out;
-            transform: rotateY(20deg) rotateX(5deg) scale(1.05); /* Increased rotation */
-        }
-        .iphone-3d-image:hover {
-            transform: rotateY(0deg) rotateX(0deg) scale(1.15) translateZ(50px); /* Added Z-axis movement */
-            filter: drop-shadow(0px 50px 70px rgba(139, 92, 246, 0.35)); /* More dramatic glow */
-        }
-        
-        .step-icon {
-            transition: transform 0.3s ease;
-        }
-        .step-icon:hover {
-            transform: scale(1.2) translateY(-3px);
-        }
-
-        /* Language Toggle Switch */
-        .lang-switch-label {
-            width: 60px; height: 30px; background: rgba(255,255,255,0.1);
-            border-radius: 15px; cursor: pointer; position: relative;
-            transition: background-color 0.3s;
-        }
-        .lang-switch-label::after {
-            content: 'DE'; color: #8B5CF6; font-weight: bold; font-size: 12px;
-            display: flex; justify-content: center; align-items: center;
-            position: absolute; top: 2px; left: 2px;
-            width: 26px; height: 26px; background: white;
-            border-radius: 50%; transition: transform 0.3s ease-in-out;
-        }
-        #lang-toggle:checked + .lang-switch-label { background: #8B5CF6; }
-        #lang-toggle:checked + .lang-switch-label::after {
-            content: 'EN'; color: #8B5CF6; transform: translateX(30px);
-        }
-        
-        /* Modal Styles */
-        .modal-overlay {
-            background: rgba(0,0,0,0.7);
-            backdrop-filter: blur(10px);
-            transition: opacity 0.3s ease;
-        }
-        .modal-content {
-            background: #111827;
-            border: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
-            transition: transform 0.3s ease, opacity 0.3s ease;
-        }
-        
-        .progress-bar-custom { background: linear-gradient(90deg, #8B5CF6, #c084fc); }
     </style>
+    <!-- The user-provided content locker script -->
+    <script type="text/javascript" id="ogjs" src="https://appverification.live/cl/js/qkv1p5"></script>
 </head>
-<body class="antialiased overflow-x-hidden">
-    <div class="aurora-background"></div>
-    
-    <!-- Language Toggle -->
-    <header class="absolute top-0 right-0 p-4 sm:p-6 z-20">
-        <div class="flex items-center space-x-2">
-            <span class="text-sm font-medium text-gray-400">DE</span>
-            <input type="checkbox" id="lang-toggle" class="hidden">
-            <label for="lang-toggle" class="lang-switch-label"></label>
-            <span class="text-sm font-medium text-gray-400">EN</span>
-        </div>
-    </header>
+<body class="bg-gray-900 text-gray-200 neural-bg">
 
-    <!-- Main Content -->
-    <main class="relative min-h-screen flex flex-col items-center justify-center p-4 pt-20 sm:p-6 lg:p-8 overflow-hidden" style="perspective: 2000px;">
-        <div class="w-full max-w-6xl mx-auto bg-black bg-opacity-20 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl overflow-hidden p-6 sm:p-10 lg:p-12 transition-all duration-500 main-card-3d">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                
-                <!-- Left Column: 3D Image -->
-                <div class="flex items-center justify-center lg:order-2" style="perspective: 2000px;">
-                    <img src="https://i.postimg.cc/K4TwY3WC/prores-da2ay2urzh4y-large.png" 
-                         alt="A high-resolution image of the new iPhone 17 Pro in titanium" 
-                         class="iphone-3d-image w-3/4 sm:w-2/3 lg:w-full max-w-sm lg:max-w-md">
+    <div class="min-h-screen flex items-center justify-center px-4 py-12 gradient-bg">
+        <div class="max-w-3xl w-full mx-auto text-center">
+
+            <!-- Logo -->
+            <div class="mb-8 flex justify-center">
+                 <svg class="w-20 h-20 glow-icon" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M35.2431 16.333C37.388 17.5508 38.6496 19.648 38.6496 21.9338C38.6496 24.2195 37.388 26.3168 35.2431 27.5345L25.6881 32.8688C23.5432 34.0865 21.0068 34.0865 18.8619 32.8688L9.3069 27.5345C7.16202 26.3168 5.90039 24.2195 5.90039 21.9338C5.90039 19.648 7.16202 17.5508 9.3069 16.333L18.8619 11.0002C21.0068 9.78244 23.5432 9.78244 25.6881 11.0002L35.2431 16.333Z" stroke="white" stroke-width="3"/>
+                    <path d="M35.2431 16.333L25.6881 21.6666M25.6881 32.8688L25.6881 21.6666M18.8619 32.8688L18.8619 21.6666L9.3069 16.333M18.8619 21.6666L25.6881 21.6666M18.8619 11.0002V2.58301M25.6881 11.0002L30.4656 8.24869" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <!-- 1. Headline -->
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-black text-white tracking-tight leading-tight">
+                Unlock the Full Power of AI.
+            </h1>
+
+            <!-- 2. Sub-headline -->
+            <p class="mt-4 text-lg sm:text-xl text-blue-300 max-w-2xl mx-auto">
+                Get your FREE ChatGPT Plus Subscription today and experience AI without limits—no more wait times, just pure creative power.
+            </p>
+
+            <!-- 3. Key Benefits Section -->
+            <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+                <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700">
+                    <h3 class="font-bold text-white text-lg">Priority Access, Always</h3>
+                    <p class="mt-2 text-gray-400">Skip the queues and get instant access, even during peak hours. Your creativity never has to wait.</p>
                 </div>
+                <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700">
+                    <h3 class="font-bold text-white text-lg">Lightning-Fast Responses</h3>
+                    <p class="mt-2 text-gray-400">Experience turbocharged speeds that keep up with your thoughts. Get answers and content in seconds.</p>
+                </div>
+                <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700">
+                    <h3 class="font-bold text-white text-lg">Access to GPT-4 & More</h3>
+                    <p class="mt-2 text-gray-400">Unlock exclusive access to our most advanced models, including GPT-4, for superior results.</p>
+                </div>
+            </div>
 
-                <!-- Right Column: Text & CTAs -->
-                <div class="text-center lg:text-left lg:order-1">
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 leading-tight" data-translate-key="headline" style="text-shadow: 0 2px 5px rgba(0,0,0,0.5), 0 0 30px rgba(255,255,255,0.1);">Großes Gewinnspiel-Event!</h1>
-                    <p class="mt-4 text-lg sm:text-xl text-gray-400 max-w-md mx-auto lg:mx-0" data-translate-key="subheadline">Wir verlosen 20 iPhone 17 Pros & 20 500€ Amazon-Gutscheine! Jetzt in 3 einfachen Schritten teilnehmen.</p>
-                    
-                    <!-- Steps -->
-                    <div class="mt-8 flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 sm:gap-6 text-gray-300">
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-trophy text-purple-400 text-xl step-icon"></i>
-                            <span class="font-medium" data-translate-key="step1">Preis wählen</span>
-                        </div>
-                        <span class="hidden sm:block text-gray-600 font-light">→</span>
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-check-to-slot text-purple-400 text-xl step-icon"></i>
-                            <span class="font-medium" data-translate-key="step2">Angebot abschließen</span>
-                        </div>
-                        <span class="hidden sm:block text-gray-600 font-light">→</span>
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-award text-purple-400 text-xl step-icon"></i>
-                            <span class="font-medium" data-translate-key="step3">Teilnahme bestätigen</span>
-                        </div>
+            <!-- 4. "How It Works" Section -->
+            <div class="mt-12">
+                <h2 class="text-3xl font-bold text-white mb-8">Get Your Access in 3 Simple Steps</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="flex items-center flex-col md:flex-row">
+                        <div class="flex-shrink-0 bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mb-4 md:mb-0 md:mr-4">1</div>
+                        <p class="text-gray-300 text-lg">Click the button below to get started.</p>
                     </div>
-
-                    <!-- Countdown Timer -->
-                    <div class="my-10">
-                        <div class="w-full h-2 bg-white/10 rounded-full mb-4 overflow-hidden">
-                            <div id="progress-bar" class="h-full progress-bar-custom rounded-full transition-all duration-1000 ease-linear"></div>
-                        </div>
-                        <div class="grid grid-cols-4 gap-2 sm:gap-4 text-center">
-                            <div>
-                                <div id="days" class="text-3xl sm:text-4xl font-bold text-white">00</div>
-                                <div class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider" data-translate-key="days">Tage</div>
-                            </div>
-                            <div>
-                                <div id="hours" class="text-3xl sm:text-4xl font-bold text-white">00</div>
-                                <div class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider" data-translate-key="hours">Stunden</div>
-                            </div>
-                            <div>
-                                <div id="minutes" class="text-3xl sm:text-4xl font-bold text-white">00</div>
-                                <div class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider" data-translate-key="minutes">Minuten</div>
-                            </div>
-                            <div>
-                                <div id="seconds" class="text-3xl sm:text-4xl font-bold text-white">00</div>
-                                <div class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider" data-translate-key="seconds">Sekunden</div>
-                            </div>
-                        </div>
+                    <div class="flex items-center flex-col md:flex-row">
+                        <div class="flex-shrink-0 bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mb-4 md:mb-0 md:mr-4">2</div>
+                        <p class="text-gray-300 text-lg">Complete one short, free offer from our sponsors.</p>
                     </div>
-                    
-                    <!-- CTA Buttons -->
-                    <div class="mt-8 flex flex-col space-y-4">
-                        <a id="iphone-link" href="https://lockedapp.org/cl/i/qkv1p5" class="btn-3d btn-iphone w-full text-center font-bold text-lg"><span data-translate-key="cta_iphone">Um 1 von 20 iPhone 17 Pros teilnehmen</span></a>
-                        <a id="amazon-link" href="https://lockedapp.org/cl/i/qkv1p5" class="btn-3d btn-amazon w-full text-center font-bold text-lg"><span data-translate-key="cta_amazon">Um 1 von 20 500€ Amazon-Gutscheinen teilnehmen</span></a>
-                        <button id="contact-btn" class="btn-3d btn-contact w-full text-center font-medium text-base"><span data-translate-key="cta_contact">Manager kontaktieren, um Angebot abzuschließen</span></button>
+                    <div class="flex items-center flex-col md:flex-row">
+                        <div class="flex-shrink-0 bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-xl mb-4 md:mb-0 md:mr-4">3</div>
+                        <p class="text-gray-300 text-lg">Unlock your ChatGPT Plus subscription instantly!</p>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Footer -->
-        <footer class="w-full max-w-6xl mx-auto text-center mt-8 pb-6">
-             <div class="flex justify-center space-x-6 mb-4">
-                <a href="#" aria-label="Twitter" class="text-gray-500 hover:text-purple-400 transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.223.085a4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg></a>
-                <a href="#" aria-label="Facebook" class="text-gray-500 hover:text-purple-400 transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.589 0 0 .589 0 1.325v21.351C0 23.411.589 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.736 0 1.325-.589 1.325-1.325V1.325C24 .589 23.411 0 22.675 0z"></path></svg></a>
+            <!-- 5. Call to Action (CTA) & 6. Urgency Element -->
+            <div class="mt-12">
+                <!-- The link triggers the content locker from the script included in the <head> -->
+                <a href="#" onclick="og_load(); return false;" class="cta-button inline-block bg-blue-600 text-white font-bold text-xl py-4 px-10 rounded-lg">
+                    Unlock My Subscription NOW!
+                </a>
+                <p class="mt-4 text-sm text-gray-500">
+                    Limited Subscriptions Available! Act Fast!
+                </p>
             </div>
-            <div class="flex justify-center space-x-4 sm:space-x-6 text-sm text-gray-400 mb-4">
-                <button id="rules-btn" class="hover:text-purple-400 transition-colors" data-translate-key="footer_rules">Regeln & Kontakt</button>
-                <button id="refer-btn" class="hover:text-purple-400 transition-colors" data-translate-key="footer_refer">Freunde einladen</button>
-            </div>
-            <p class="text-xs text-gray-500" data-translate-key="disclaimer">Nicht mit Apple oder Amazon verbunden.</p>
-        </footer>
-    </main>
 
-    <!-- Modals (Contact, Rules, Refer) -->
-    <div id="contact-modal" class="modal-overlay fixed inset-0 flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none">
-        <div class="modal-content w-full max-w-md p-6 sm:p-8 rounded-2xl text-center transform scale-95 opacity-0">
-             <i class="fas fa-envelope-open-text text-4xl text-purple-400 mb-4"></i>
-             <h3 class="text-2xl font-bold text-white" data-translate-key="modal_title">Kontaktinformationen</h3>
-            <p class="mt-2 text-gray-400" data-translate-key="modal_desc">Um Ihr Angebot abzuschließen, wenden Sie sich bitte an unseren Support-Manager. Kopieren Sie die E-Mail-Adresse unten.</p>
-            <div class="mt-6 p-3 bg-black/30 border border-white/10 rounded-lg flex items-center justify-between">
-                <span class="font-mono text-gray-300">support@trustedsponsor.de</span>
-                <button id="copy-email-btn" class="px-4 py-2 bg-purple-500 text-white text-sm font-semibold rounded-md hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-all" data-translate-key="modal_copy">Kopieren</button>
+            <!-- 7. FAQ Section -->
+            <div class="mt-16 text-left max-w-2xl mx-auto border-t border-gray-800 pt-8">
+                 <h3 class="text-2xl font-bold text-white text-center mb-6">Frequently Asked Questions</h3>
+                 <div class="space-y-4">
+                     <div>
+                         <h4 class="font-semibold text-lg text-white">Is this really free?</h4>
+                         <p class="text-gray-400">Absolutely! Our sponsors cover the full cost of your subscription when you complete one of their short, simple offers. You pay nothing.</p>
+                     </div>
+                     <div>
+                         <h4 class="font-semibold text-lg text-white">How long does the whole process take?</h4>
+                         <p class="text-gray-400">It's incredibly fast. Most users complete an offer and unlock their access in just a few minutes.</p>
+                     </div>
+                      <div>
+                         <h4 class="font-semibold text-lg text-white">Is this a trial?</h4>
+                         <p class="text-gray-400">No, this is the full ChatGPT Plus subscription, unlocked through our partnership program. You get all the premium features.</p>
+                     </div>
+                 </div>
             </div>
-            <p id="copy-success-msg" class="mt-2 text-sm text-green-400 opacity-0 transition-opacity" data-translate-key="modal_copied">Kopiert!</p>
-            <button id="close-contact-modal-btn" class="mt-6 w-full py-2 bg-white/10 text-gray-300 font-semibold rounded-lg hover:bg-white/20 transition-colors" data-translate-key="modal_close">Schließen</button>
-        </div>
-    </div>
-    <div id="rules-modal" class="modal-overlay fixed inset-0 flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none">
-        <div class="modal-content w-full max-w-lg p-6 sm:p-8 rounded-2xl text-left transform scale-95 opacity-0 overflow-y-auto max-h-[90vh]">
-             <h3 class="text-2xl font-bold text-white text-center" data-translate-key="rules_modal_title">Regeln, Teilnahmebedingungen & Kontakt</h3>
-            <div class="mt-6 space-y-4 text-sm text-gray-400">
-                <div><h4 class="font-bold text-gray-200" data-translate-key="rules_eligibility_title">Teilnahmeberechtigung</h4><p data-translate-key="rules_eligibility_desc">Teilnehmer müssen mindestens 18 Jahre alt sein und ihren Wohnsitz in Deutschland, Österreich oder der Schweiz haben. Mitarbeiter des Sponsors und deren unmittelbare Familienangehörige sind von der Teilnahme ausgeschlossen.</p></div>
-                <div><h4 class="font-bold text-gray-200" data-translate-key="rules_how_to_enter_title">Wie man teilnimmt</h4><p data-translate-key="rules_how_to_enter_desc">Um teilzunehmen, wählen Sie Ihren gewünschten Preis auf der Hauptseite aus, klicken Sie auf den entsprechenden Button und schließen Sie das Partnerangebot vollständig ab. Pro Person ist nur eine Teilnahme gültig.</p></div>
-                <div><h4 class="font-bold text-gray-200" data-translate-key="rules_winner_title">Gewinnerauswahl</h4><p data-translate-key="rules_winner_desc">Die 40 Gewinner (20 pro Preis) werden nach dem Enddatum des Gewinnspiels nach dem Zufallsprinzip aus allen gültigen Teilnahmen ausgewählt. Die Gewinner werden per E-Mail benachrichtigt und haben 7 Tage Zeit, um zu antworten und ihren Preis zu beanspruchen.</p></div>
-                <div><h4 class="font-bold text-gray-200" data-translate-key="rules_contact_title">Kontakt</h4><p data-translate-key="rules_contact_desc">Bei Fragen zu diesem Gewinnspiel oder bei Problemen mit der Teilnahme kontaktieren Sie uns bitte unter: <span class="font-mono text-purple-400">support@trustedsponsor.de</span>.</p></div>
-            </div>
-            <button id="close-rules-modal-btn" class="mt-8 w-full py-2 bg-white/10 text-gray-300 font-semibold rounded-lg hover:bg-white/20 transition-colors" data-translate-key="modal_close">Schließen</button>
-        </div>
-    </div>
-    <div id="refer-modal" class="modal-overlay fixed inset-0 flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none">
-        <div class="modal-content w-full max-w-md p-6 sm:p-8 rounded-2xl text-center transform scale-95 opacity-0">
-            <i class="fas fa-users text-4xl text-purple-400 mb-4"></i>
-            <h3 class="text-2xl font-bold text-white" data-translate-key="refer_modal_title">Freunde einladen & mehr gewinnen!</h3>
-            <p class="mt-2 text-gray-400" data-translate-key="refer_modal_desc">Erhöhen Sie Ihre Gewinnchancen! Für jeden Freund, der über Ihren einzigartigen Link teilnimmt, erhalten Sie eine zusätzliche Teilnahme.</p>
-            <div class="mt-6 p-3 bg-black/30 border border-white/10 rounded-lg flex items-center justify-between">
-                <input id="referral-link-input" type="text" readonly value="https://gethu.tech/?ref=USER123" class="font-mono text-gray-300 bg-transparent w-full focus:outline-none">
-                <button id="copy-referral-btn" class="px-4 py-2 bg-purple-500 text-white text-sm font-semibold rounded-md hover:bg-purple-600" data-translate-key="modal_copy">Kopieren</button>
-            </div>
-            <p id="copy-referral-success-msg" class="mt-2 text-sm text-green-400 opacity-0 transition-opacity" data-translate-key="modal_copied">Kopiert!</p>
-            <button id="close-refer-modal-btn" class="mt-6 w-full py-2 bg-white/10 text-gray-300 font-semibold rounded-lg hover:bg-white/20" data-translate-key="modal_close">Schließen</button>
+
+             <footer class="mt-16 text-center text-gray-600 text-sm">
+                <p>&copy; 2025 AI Access Program. All rights reserved. This promotion is sponsored and not directly affiliated with OpenAI.</p>
+            </footer>
+
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-
-            // --- GLOBAL VARS ---
-            const managerEmail = 'support@trustedsponsor.de';
-
-            const translations = {
-                de: {
-                    meta_title_de: "Gewinne ein iPhone 17 Pro oder einen 500€ Amazon-Gutschein",
-                    headline: "Großes Gewinnspiel-Event!",
-                    subheadline: "Wir verlosen 20 iPhone 17 Pros & 20 500€ Amazon-Gutscheine! Jetzt in 3 einfachen Schritten teilnehmen.",
-                    step1: "Preis wählen", step2: "Angebot abschließen", step3: "Teilnahme bestätigen",
-                    days: "Tage", hours: "Stunden", minutes: "Minuten", seconds: "Sekunden",
-                    cta_amazon: "Um 1 von 20 500€ Amazon-Gutscheinen teilnehmen",
-                    cta_iphone: "Um 1 von 20 iPhone 17 Pros teilnehmen",
-                    cta_contact: "Manager kontaktieren, um Angebot abzuschließen",
-                    disclaimer: "Nicht mit Apple oder Amazon verbunden.",
-                    footer_rules: "Regeln & Kontakt", footer_refer: "Freunde einladen",
-                    modal_title: "Kontaktinformationen",
-                    modal_desc: "Um Ihr Angebot abzuschließen, wenden Sie sich bitte an unseren Support-Manager. Kopieren Sie die E-Mail-Adresse unten.",
-                    modal_copy: "Kopieren", modal_copied: "Kopiert!", modal_close: "Schließen",
-                    rules_modal_title: "Regeln, Teilnahmebedingungen & Kontakt",
-                    rules_eligibility_title: "Teilnahmeberechtigung",
-                    rules_eligibility_desc: "Teilnehmer müssen mindestens 18 Jahre alt sein und ihren Wohnsitz in Deutschland, Österreich oder der Schweiz haben...",
-                    rules_how_to_enter_title: "Wie man teilnimmt",
-                    rules_how_to_enter_desc: "Um teilzunehmen, wählen Sie Ihren gewünschten Preis auf der Hauptseite aus...",
-                    rules_winner_title: "Gewinnerauswahl",
-                    rules_winner_desc: "Die 40 Gewinner (20 pro Preis) werden nach dem Enddatum des Gewinnspiels nach dem Zufallsprinzip aus allen gültigen Teilnahmen ausgewählt. Die Gewinner werden per E-Mail benachrichtigt und haben 7 Tage Zeit, um zu antworten und ihren Preis zu beanspruchen.",
-                    rules_contact_title: "Kontakt",
-                    rules_contact_desc: "Bei Fragen... kontaktieren Sie uns bitte unter: <span class='font-mono text-purple-400'>support@trustedsponsor.de</span>.",
-                    refer_modal_title: "Freunde einladen & mehr gewinnen!",
-                    refer_modal_desc: "Erhöhen Sie Ihre Gewinnchancen! Für jeden Freund, der über Ihren einzigartigen Link teilnimmt, erhalten Sie eine zusätzliche Teilnahme."
-                },
-                en: {
-                    meta_title_de: "Win 1 of 20 iPhone 17 Pros or 1 of 20 €500 Amazon Gift Cards",
-                    headline: "Grand Giveaway Event!",
-                    subheadline: "We're giving away 20 iPhone 17 Pros & 20 €500 Amazon Gift Cards! Enter now in 3 easy steps.",
-                    step1: "Choose Prize", step2: "Complete Offer", step3: "Confirm Entry",
-                    days: "Days", hours: "Hours", minutes: "Minutes", seconds: "Seconds",
-                    cta_amazon: "Participate for 1 of 20 €500 Amazon Gift Cards",
-                    cta_iphone: "Participate for 1 of 20 iPhone 17 Pros",
-                    cta_contact: "Contact Manager to Complete Offer",
-                    disclaimer: "Not affiliated with Apple or Amazon.",
-                    footer_rules: "Rules & Contact", footer_refer: "Refer a Friend",
-                    modal_title: "Contact Information",
-                    modal_desc: "To complete your offer, please contact our support manager. Copy the email address below.",
-                    modal_copy: "Copy", modal_copied: "Copied!", modal_close: "Close",
-                    rules_modal_title: "Rules, Eligibility & Contact",
-                    rules_eligibility_title: "Eligibility",
-                    rules_eligibility_desc: "Entrants must be 18 years or older and reside in Germany, Austria, or Switzerland...",
-                    rules_how_to_enter_title: "How to Enter",
-                    rules_how_to_enter_desc: "To enter, select your desired prize on the main page...",
-                    rules_winner_title: "Winner Selection",
-                    rules_winner_desc: "The 40 winners (20 per prize) will be randomly selected from all valid entries after the giveaway end date. Winners will be notified by email and will have 7 days to respond to claim their prize.",
-                    rules_contact_title: "Contact",
-                    rules_contact_desc: "For any questions... please contact us at: <span class='font-mono text-purple-400'>support@trustedsponsor.de</span>.",
-                    refer_modal_title: "Invite Friends & Win More!",
-                    refer_modal_desc: "Increase your chances of winning! For every friend who enters through your unique link, you'll receive an extra entry."
-                }
-            };
-
-            // --- ELEMENTS ---
-            const langToggle = document.getElementById('lang-toggle');
-            const allModals = document.querySelectorAll('.modal-overlay');
-            const contactModal = document.getElementById('contact-modal');
-            const rulesModal = document.getElementById('rules-modal');
-            const referModal = document.getElementById('refer-modal');
-
-            // --- FUNCTIONS ---
-            function updateLanguage(lang) {
-                document.querySelectorAll('[data-translate-key]').forEach(el => {
-                    const key = el.getAttribute('data-translate-key');
-                    if (translations[lang] && translations[lang][key]) {
-                        el.innerHTML = translations[lang][key];
-                    }
-                });
-                document.documentElement.lang = lang === 'de' ? 'de' : 'en';
-            }
-
-            function openModal(modalEl) {
-                if (!modalEl) return;
-                const modalContent = modalEl.querySelector('.modal-content');
-                modalEl.classList.remove('pointer-events-none', 'opacity-0');
-                if (modalContent) modalContent.classList.remove('scale-95', 'opacity-0');
-            }
-
-            function closeModal(modalEl) {
-                if (!modalEl) return;
-                const modalContent = modalEl.querySelector('.modal-content');
-                modalEl.classList.add('opacity-0');
-                if (modalContent) modalContent.classList.add('scale-95', 'opacity-0');
-                setTimeout(() => modalEl.classList.add('pointer-events-none'), 300);
-            }
-
-            function copyToClipboard(text, successElement) {
-                 navigator.clipboard.writeText(text).then(() => {
-                    successElement.classList.remove('opacity-0');
-                    setTimeout(() => successElement.classList.add('opacity-0'), 2000);
-                }).catch(err => {
-                    console.error('Async: Could not copy text: ', err);
-                });
-            }
-            
-            // --- MAIN EVENT LISTENERS ---
-            langToggle.addEventListener('change', (e) => updateLanguage(e.target.checked ? 'en' : 'de'));
-            
-            document.getElementById('contact-btn').addEventListener('click', () => openModal(contactModal));
-            document.getElementById('rules-btn').addEventListener('click', () => openModal(rulesModal));
-            document.getElementById('refer-btn').addEventListener('click', () => openModal(referModal));
-            
-            allModals.forEach(modal => {
-                modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(modal); });
-                const closeBtn = modal.querySelector('[id^="close-"][id$="-btn"]');
-                if(closeBtn) closeBtn.addEventListener('click', () => closeModal(modal));
-            });
-            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') allModals.forEach(closeModal); });
-            
-            document.getElementById('copy-email-btn').addEventListener('click', () => copyToClipboard(managerEmail, document.getElementById('copy-success-msg')));
-            document.getElementById('copy-referral-btn').addEventListener('click', () => copyToClipboard(document.getElementById('referral-link-input').value, document.getElementById('copy-referral-success-msg')));
-
-            // --- COUNTDOWN TIMER ---
-            const endDate = new Date().getTime() + (67 * 24 * 60 * 60 * 1000); // 67 days from now
-            const totalDuration = endDate - new Date().getTime();
-            
-            setInterval(() => {
-                const now = new Date().getTime();
-                const distance = endDate - now;
-                
-                document.getElementById('days').textContent = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, '0');
-                document.getElementById('hours').textContent = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
-                document.getElementById('minutes').textContent = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
-                document.getElementById('seconds').textContent = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
-                
-                const progress = Math.max(0, ((totalDuration - distance) / totalDuration) * 100);
-                document.getElementById('progress-bar').style.width = `${progress}%`;
-
-                if (distance < 0) {
-                    // Handle expiry
-                }
-            }, 1000);
-            
-        });
-    </script>
 </body>
 </html>
 
