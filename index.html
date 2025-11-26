@@ -1,160 +1,394 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top Websites to Make Money Online</title>
+import React, { useState, useEffect } from 'react';
+import { 
+  Check, 
+  Menu, 
+  X, 
+  Zap, 
+  Shield, 
+  BarChart, 
+  Globe, 
+  ArrowRight, 
+  Play, 
+  Users,
+  Star,
+  ChevronDown,
+  Mail,
+  Hexagon
+} from 'lucide-react';
 
-    <!-- Ad Script -->
-    <script src="https://fpyf8.com/88/tag.min.js" data-zone="185126" async data-cfasync="false"></script>
+const LandingPage = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-    <!-- Automatically open all Monetag links in separate tabs -->
-    <script>
-        const monetagLinks = [
-            "https://www.effectivegatecpm.com/sue1pjre?key=da4a691f4c421c474d1bcc27561bf38d",
-            "https://www.effectivegatecpm.com/r6fsq42sdg?key=52ad215dc615a1ca82564681aa74a68f",
-            "https://www.effectivegatecpm.com/p8f0csgvi5?key=7871e777be92622e09a30f9c17da0de9",
-            "https://www.effectivegatecpm.com/eqhxmzzv?key=6cc09ab2f2d9e8b3e93a417c4df01407",
-            "https://www.effectivegatecpm.com/wnk28ead?key=52f6d2f6431ef9a1d6aa3bc075dc0fea",
-            "https://www.effectivegatecpm.com/spmf1u9e8i?key=224f296b30cdcf03a0ca044e2ece0e1d",
-            "https://www.effectivegatecpm.com/a2ueer49?key=b0bba1eb21c9a1427f44018b8e329fe4",
-            "https://www.effectivegatecpm.com/gi1c31v3?key=485e843fa9fa2cfa7f053cc4d09a1ba6",
-            "https://www.effectivegatecpm.com/hrbtfcxm?key=851ac0ee174b0b22c3a2376a9aacc49e",
-            "https://www.effectivegatecpm.com/kaphwxhe4?key=5a9a2fbae6960422caff7ecd3a813695",
-            "https://www.effectivegatecpm.com/zrehae1ji?key=79948cd30f9fef239806497a55c82f8a",
-            "https://www.effectivegatecpm.com/atpe5hu53?key=1fa1ae5a1b0b57f2a99a0841b9320ac6",
-            "https://www.effectivegatecpm.com/s1nnigtjv?key=6597fb0066a414b303432c15befb3284",
-            "https://www.effectivegatecpm.com/yqnzr67mw?key=8409b849eeb006145423fd8d2388215d",
-            "https://www.effectivegatecpm.com/yk3kxtxxis?key=47e57a572a5f2555c50621078538db58"
-        ];
+  // Handle scroll for sticky navbar styling
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-        window.onload = function() {
-            monetagLinks.forEach(link => {
-                const newTab = window.open(link, '_blank');
-                if (newTab) newTab.blur();
-            });
-            window.focus();
-        };
-    </script>
+  // Add Content Locker Script for OGAds
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = "https://playabledownloads.com/script_include.php?id=1854684";
+    script.type = "text/javascript";
+    script.async = true;
+    document.body.appendChild(script);
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
 
-    <style>
-        body {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-    </style>
-</head>
-<body class="bg-gradient-to-b from-blue-50 to-white font-sans text-gray-800">
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-<div class="container mx-auto max-w-2xl px-5 py-12">
+  const features = [
+    {
+      title: "Real-time Analytics",
+      description: "Monitor your data with millisecond precision. Our dashboard updates instantly as events happen.",
+      icon: <BarChart className="w-6 h-6 text-blue-400" />,
+      color: "bg-blue-500/10"
+    },
+    {
+      title: "Global Edge Network",
+      description: "Deploy your application to 35+ regions worldwide. Experience low latency regardless of user location.",
+      icon: <Globe className="w-6 h-6 text-purple-400" />,
+      color: "bg-purple-500/10"
+    },
+    {
+      title: "Enterprise Security",
+      description: "Bank-grade encryption, SOC2 compliance, and automated threat detection built-in by default.",
+      icon: <Shield className="w-6 h-6 text-emerald-400" />,
+      color: "bg-emerald-500/10"
+    },
+    {
+      title: "Instant Scaling",
+      description: "Handle traffic spikes effortlessly. Our infrastructure autoscales to meet demand in seconds.",
+      icon: <Zap className="w-6 h-6 text-amber-400" />,
+      color: "bg-amber-500/10"
+    }
+  ];
 
-    <!-- Header -->
-    <header class="text-center mb-10">
-        <h1 class="text-3xl md:text-4xl font-bold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-700">
-            Top 4 Websites to Make Money Online Safely
-        </h1>
-        <p class="text-lg text-gray-600">
-            We've reviewed the most reliable platforms for earning online. Get started today.
-        </p>
-    </header>
+  const testimonials = [
+    {
+      name: "Sarah Jenkins",
+      role: "CTO at TechFlow",
+      content: "Prosnoz completely transformed how we handle our deployment pipeline. It's simply the best tool in the market.",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah"
+    },
+    {
+      name: "Marcus Chen",
+      role: "Lead Dev at StartupX",
+      content: "The analytics features alone are worth the price. We've optimized our load times by 40% since switching.",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Marcus"
+    },
+    {
+      name: "Elena Rodriguez",
+      role: "Product Manager",
+      content: "Incredible UX and support. The team actually listens to feedback and ships features fast.",
+      image: "https://api.dicebear.com/7.x/avataaars/svg?seed=Elena"
+    }
+  ];
 
-    <!-- Social Proof -->
-    <div class="mb-12">
-        <p class="text-center text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">
-            TRUSTED BY TOP EARNERS
-        </p>
-        <div class="flex justify-center items-center space-x-6 md:space-x-10 opacity-80">
-            <img src="https://placehold.co/120x40/F3F4F6/9CA3AF?text=BrandLogo" alt="Partner Logo 1" class="h-6 md:h-8" onerror="this.style.display='none'">
-            <img src="https://placehold.co/120x40/F3F4F6/9CA3AF?text=PartnerLogo" alt="Partner Logo 2" class="h-6 md:h-8" onerror="this.style.display='none'">
-            <img src="https://placehold.co/120x40/F3F4F6/9CA3AF?text=SeenOn" alt="Partner Logo 3" class="h-6 md:h-8" onerror="this.style.display='none'">
+  return (
+    <div className="min-h-screen bg-slate-950 text-slate-50 font-sans selection:bg-indigo-500/30">
+      
+      {/* Navigation */}
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-950/80 backdrop-blur-md border-b border-white/5 py-4' : 'bg-transparent py-6'}`}>
+        <div className="container mx-auto px-6 flex justify-between items-center">
+          <div className="flex items-center gap-3 font-bold text-2xl tracking-tight">
+            {/* Logo inspired by Prosnoz (Pro/Hexagon shape) */}
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-cyan-600 flex items-center justify-center shadow-lg shadow-emerald-500/20">
+              <Hexagon className="w-6 h-6 text-white fill-white/20 stroke-[2.5]" />
+            </div>
+            <span className="text-white tracking-wide">PROSNOZ</span>
+          </div>
+
+          {/* Desktop Nav */}
+          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+            <a href="#features" className="hover:text-white transition-colors">Features</a>
+            <a href="#how-it-works" className="hover:text-white transition-colors">How it Works</a>
+            <a href="#testimonials" className="hover:text-white transition-colors">Customers</a>
+          </div>
+
+          <div className="hidden md:flex items-center gap-4">
+            <button className="text-slate-300 hover:text-white font-medium transition-colors">Log in</button>
+            <a href="https://playabledownloads.com/1853687" className="bg-white text-slate-950 px-5 py-2.5 rounded-full font-semibold hover:bg-emerald-50 transition-all hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]">
+              Get Started
+            </a>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button onClick={toggleMenu} className="md:hidden text-slate-300 hover:text-white">
+            {isMenuOpen ? <X /> : <Menu />}
+          </button>
         </div>
+
+        {/* Mobile Nav */}
+        {isMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-white/10 p-6 flex flex-col gap-4 shadow-2xl">
+            <a href="#features" onClick={() => setIsMenuOpen(false)} className="text-slate-300 hover:text-white">Features</a>
+            <a href="#how-it-works" onClick={() => setIsMenuOpen(false)} className="text-slate-300 hover:text-white">How it Works</a>
+            <a href="#testimonials" onClick={() => setIsMenuOpen(false)} className="text-slate-300 hover:text-white">Customers</a>
+            <hr className="border-white/10 my-2" />
+            <button className="text-slate-300 hover:text-white text-left">Log in</button>
+            <a href="https://playabledownloads.com/1853687" className="bg-emerald-600 text-white px-5 py-3 rounded-lg font-semibold text-center block">Get Started</a>
+          </div>
+        )}
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+        {/* Background Gradients */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-emerald-600/10 rounded-full blur-[120px] -z-10" />
+        <div className="absolute bottom-0 right-0 w-[800px] h-[600px] bg-cyan-600/10 rounded-full blur-[100px] -z-10" />
+
+        <div className="container mx-auto px-6 text-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-emerald-300 text-sm font-medium mb-8 animate-fade-in-up">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            v2.0 is now live. See what's new <ArrowRight className="w-4 h-4" />
+          </div>
+
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 bg-clip-text text-transparent bg-gradient-to-b from-white to-slate-400 leading-[1.1]">
+            Automate your workflow <br className="hidden md:block" />
+            <span className="text-white">at lightspeed.</span>
+          </h1>
+          
+          <p className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+            Stop wrestling with complex infrastructure. Prosnoz provides the tools you need to build, deploy, and scale your applications in minutes, not days.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-center gap-4">
+            <div className="flex flex-col items-center gap-2 w-full sm:w-auto">
+              <a href="https://playabledownloads.com/1853687" className="w-full sm:w-auto px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full font-semibold transition-all hover:scale-105 hover:shadow-[0_0_40px_-10px_rgba(16,185,129,0.5)] flex items-center justify-center gap-2">
+                Get Automation Free <ArrowRight className="w-5 h-5" />
+              </a>
+              <p className="text-xs text-emerald-200/70 font-medium max-w-[280px] leading-relaxed">
+                Complete just one offer and you will get the full automation for free in your mail.
+              </p>
+            </div>
+            
+            <button className="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 text-white border border-white/10 rounded-full font-semibold transition-all flex items-center justify-center gap-2 group">
+              <div className="w-6 h-6 rounded-full bg-white text-slate-900 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <Play className="w-3 h-3 fill-current ml-0.5" />
+              </div>
+              Watch Demo
+            </button>
+          </div>
+
+          {/* Trusted By */}
+          <div className="mt-20 pt-10 border-t border-white/5">
+            <p className="text-sm text-slate-500 font-medium mb-6">TRUSTED BY INNOVATIVE TEAMS AT</p>
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+              {['Acme Corp', 'GlobalBank', 'Nebula', 'Spherule', 'Tesseract'].map((company) => (
+                <span key={company} className="text-xl font-bold text-white">{company}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Grid */}
+      <section id="features" className="py-24 bg-slate-900/50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Everything you need to scale</h2>
+            <p className="text-slate-400 max-w-2xl mx-auto">Powerful features designed to help your team move faster and break fewer things.</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="p-6 rounded-2xl bg-white/5 border border-white/5 hover:border-emerald-500/50 hover:bg-white/[0.07] transition-all group">
+                <div className={`w-12 h-12 rounded-lg ${feature.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+                <p className="text-slate-400 text-sm leading-relaxed">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive Demo / How it Works */}
+      <section id="how-it-works" className="py-24 overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="lg:w-1/2">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Designed for the <br />
+                <span className="text-emerald-400">modern developer stack</span>
+              </h2>
+              <div className="space-y-8">
+                {[
+                  { title: "Connect your repo", desc: "Link your GitHub or GitLab repository with a single click." },
+                  { title: "Configure build settings", desc: "We automatically detect your framework and settings." },
+                  { title: "Deploy globally", desc: "Your app is live on our edge network in seconds." }
+                ].map((step, idx) => (
+                  <div key={idx} className="flex gap-4 group">
+                    <div className="flex flex-col items-center">
+                      <div className="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm border border-emerald-500/30 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                        {idx + 1}
+                      </div>
+                      {idx !== 2 && <div className="w-0.5 h-full bg-white/10 my-2 group-hover:bg-emerald-500/30 transition-colors" />}
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold mb-1">{step.title}</h4>
+                      <p className="text-slate-400 text-sm">{step.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="lg:w-1/2 w-full">
+              <div className="relative rounded-xl bg-slate-900 border border-white/10 shadow-2xl p-4 overflow-hidden group">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-teal-500" />
+                <div className="flex items-center gap-2 mb-4 border-b border-white/5 pb-4">
+                  <div className="flex gap-1.5">
+                    <div className="w-3 h-3 rounded-full bg-red-500/20" />
+                    <div className="w-3 h-3 rounded-full bg-yellow-500/20" />
+                    <div className="w-3 h-3 rounded-full bg-green-500/20" />
+                  </div>
+                  <div className="text-xs text-slate-500 font-mono">dashboard.prosnoz.com</div>
+                </div>
+                {/* Mock UI Content */}
+                <div className="space-y-4 font-mono text-sm">
+                  <div className="flex items-center justify-between text-slate-400">
+                    <span>STATUS</span>
+                    <span className="text-emerald-400">● Online</span>
+                  </div>
+                  <div className="h-32 bg-slate-800/50 rounded-lg flex items-end p-2 gap-1">
+                    {[40, 65, 45, 80, 55, 70, 90, 60, 75, 50, 85, 95].map((h, i) => (
+                      <div key={i} style={{ height: `${h}%` }} className="flex-1 bg-emerald-500/40 hover:bg-emerald-400 rounded-sm transition-all duration-300" />
+                    ))}
+                  </div>
+                  <div className="flex gap-4 text-xs">
+                    <div className="flex-1 bg-white/5 p-3 rounded">
+                      <div className="text-slate-500 mb-1">Requests</div>
+                      <div className="text-white font-bold text-lg">2.4M</div>
+                    </div>
+                    <div className="flex-1 bg-white/5 p-3 rounded">
+                      <div className="text-slate-500 mb-1">Latency</div>
+                      <div className="text-white font-bold text-lg">24ms</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section id="testimonials" className="py-24 bg-slate-900/50 border-y border-white/5">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">Loved by developers</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((t, i) => (
+              <div key={i} className="bg-slate-950 p-8 rounded-2xl border border-white/5 relative">
+                <div className="flex gap-1 text-amber-400 mb-4">
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
+                </div>
+                <p className="text-slate-300 mb-6 leading-relaxed">"{t.content}"</p>
+                <div className="flex items-center gap-4">
+                  <img src={t.image} alt={t.name} className="w-10 h-10 rounded-full" />
+                  <div>
+                    <div className="font-bold text-sm">{t.name}</div>
+                    <div className="text-xs text-slate-500">{t.role}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24">
+        <div className="container mx-auto px-6">
+          <div className="bg-gradient-to-r from-emerald-600 to-cyan-600 rounded-3xl p-12 text-center relative overflow-hidden">
+             {/* Decorative circles */}
+             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl" />
+             <div className="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-2xl" />
+             
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 relative z-10">Ready to try Prosnoz?</h2>
+            <p className="text-emerald-100 text-lg mb-8 max-w-2xl mx-auto relative z-10">Join 10,000+ developers building the future of the web today. No credit card required.</p>
+            
+            <div className="flex flex-col items-center gap-3 relative z-10">
+              <a href="https://playabledownloads.com/1853687" className="inline-block bg-white text-emerald-700 px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-50 transition-colors shadow-xl">
+                Get Automation Free
+              </a>
+              <p className="text-sm text-emerald-100 font-medium max-w-md">
+                Complete just one offer and you will get the full automation for free in your mail.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-slate-950 border-t border-white/10 pt-16 pb-8">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-12 mb-12">
+            <div>
+              <div className="flex items-center gap-2 font-bold text-xl mb-4">
+                <div className="w-6 h-6 rounded bg-emerald-500 flex items-center justify-center">
+                  <Hexagon className="w-3 h-3 text-white fill-white/20" />
+                </div>
+                <span>PROSNOZ</span>
+              </div>
+              <p className="text-slate-400 text-sm">Building the next generation of deployment tools for modern engineering teams.</p>
+            </div>
+            
+            <div>
+              <h4 className="font-bold mb-4">Product</h4>
+              <ul className="space-y-2 text-sm text-slate-400">
+                <li><a href="#" className="hover:text-white">Features</a></li>
+                <li><a href="#" className="hover:text-white">Integrations</a></li>
+                <li><a href="#" className="hover:text-white">Changelog</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-bold mb-4">Company</h4>
+              <ul className="space-y-2 text-sm text-slate-400">
+                <li><a href="#" className="hover:text-white">About Us</a></li>
+                <li><a href="#" className="hover:text-white">Careers</a></li>
+                <li><a href="#" className="hover:text-white">Blog</a></li>
+                <li><a href="#" className="hover:text-white">Contact</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-bold mb-4">Stay Updated</h4>
+              <div className="flex gap-2">
+                <input type="email" placeholder="Enter your email" className="bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm w-full focus:outline-none focus:border-emerald-500" />
+                <button className="bg-emerald-600 hover:bg-emerald-500 px-4 py-2 rounded-lg text-white transition-colors">
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-slate-500 text-sm">© 2024 Prosnoz Inc. All rights reserved.</p>
+            <div className="flex gap-6 text-slate-500">
+              <a href="#" className="hover:text-white"><Globe className="w-5 h-5" /></a>
+              <a href="#" className="hover:text-white"><Mail className="w-5 h-5" /></a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
+  );
+};
 
-    <!-- Affiliate Offers -->
-    <main class="space-y-6">
-
-        <a href="https://otieu.com/4/10183873?utm_source=facebook&utm_medium=organic&utm_campaign=postA&sub1=link1&fbclid={{fbclid}}" target="_blank" rel="noopener noreferrer nofollow" class="block bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                <div class="mb-4 sm:mb-0 sm:mr-6">
-                    <h2 class="text-xl font-semibold text-gray-900 mb-1">1. Pro Freelancer Hub</h2>
-                    <p class="text-gray-600">A top-tier platform for skilled professionals. Find high-paying projects from verified clients in writing, design, and programming.</p>
-                </div>
-                <div class="flex-shrink-0">
-                    <span class="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl hover:brightness-110 transform hover:-translate-y-px transition-all duration-300">Start Now</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="https://otieu.com/4/10183872?utm_source=facebook&utm_medium=organic&utm_campaign=postA&sub1=link2&fbclid={{fbclid}}" target="_blank" rel="noopener noreferrer nofollow" class="block bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                <div class="mb-4 sm:mb-0 sm:mr-6">
-                    <h2 class="text-xl font-semibold text-gray-900 mb-1">2. E-com Builder Suite</h2>
-                    <p class="text-gray-600">The easiest way to launch your own online store. This all-in-one tool handles products, payments, and shipping for you.</p>
-                </div>
-                <div class="flex-shrink-0">
-                    <span class="inline-block bg-gradient-to-r from-emerald-500 to-green-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl hover:brightness-110 transform hover:-translate-y-px transition-all duration-300">Visit Site</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="https://otieu.com/4/10183871?utm_source=facebook&utm_medium=organic&utm_campaign=postA&sub1=link3&fbclid={{fbclid}}" target="_blank" rel="noopener noreferrer nofollow" class="block bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                <div class="mb-4 sm:mb-0 sm:mr-6">
-                    <h2 class="text-xl font-semibold text-gray-900 mb-1">3. Survey & Rewards Panel</h2>
-                    <p class="text-gray-600">A trusted site that pays you for your opinions. Perfect for earning extra cash in your spare time.</p>
-                </div>
-                <div class="flex-shrink-0">
-                    <span class="inline-block bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl hover:brightness-110 transform hover:-translate-y-px transition-all duration-300">Get Started</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="https://otieu.com/4/10183813?utm_source=facebook&utm_medium=organic&utm_campaign=postA&sub1=link4&fbclid={{fbclid}}" target="_blank" rel="noopener noreferrer nofollow" class="block bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300">
-            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                <div class="mb-4 sm:mb-0 sm:mr-6">
-                    <h2 class="text-xl font-semibold text-gray-900 mb-1">4. Online Investor Kit</h2>
-                    <p class="text-gray-600">Learn the basics of online investing with beginner-friendly tools and guides. Start building your portfolio today.</p>
-                </div>
-                <div class="flex-shrink-0">
-                    <span class="inline-block bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl hover:brightness-110 transform hover:-translate-y-px transition-all duration-300">Learn More</span>
-                </div>
-            </div>
-        </a>
-
-    </main>
-
-    <!-- Testimonials -->
-    <section class="mt-12 text-center">
-        <h3 class="text-xl font-semibold text-gray-900 mb-4">What Our Users Say</h3>
-        <div class="space-y-6">
-            <blockquote class="bg-white p-6 rounded-xl shadow-lg max-w-lg mx-auto border border-gray-100">
-                <p class="text-gray-700 italic">"I started using the Freelancer Hub from this list and landed my first client in 48 hours. Genuinely great recommendations."</p>
-                <cite class="block text-right not-italic text-sm font-semibold text-gray-600 mt-3">- Sarah K.</cite>
-            </blockquote>
-        </div>
-    </section>
-
-    <!-- Footer / Disclosure -->
-    <footer class="text-center mt-12 pt-8 border-t border-gray-200">
-        <p class="text-xs text-gray-500">Disclosure: This page contains affiliate links. If you click a link and sign up or make a purchase, we may receive a commission at no extra cost to you. We only recommend platforms we trust.</p>
-        <p class="text-xs text-gray-500 mt-2">&copy; 2025 YourSiteName. All rights reserved.</p>
-    </footer>
-
-</div>
-
-</body>
-</html>
+export default LandingPage;
