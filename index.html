@@ -3,193 +3,433 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prosnoz - Automate your workflow</title>
     
-    <!-- Content Locker Script -->
-    <script type="text/javascript" src="https://getafilenow.com/script_include.php?id=1849635"></script>
+    <!-- SEO and Meta Tags -->
+    <title>Win an iPhone 17 Pro or a €500 Amazon Gift Card</title>
+    <meta name="description" content="Participate in our exclusive giveaway and get a chance to win a brand new iPhone 17 Pro or a €500 Amazon Gift Card. Limited time only!">
+    <meta name="keywords" content="giveaway, iphone 17 pro, amazon gift card, cpa, raffle, free entry, sweepstakes">
+    
+    <!-- Monetag Meta Tag -->
+    <meta name="monetag" content="cea11238fafab1f2a7742693342f74c4">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gethu.tech/">
+    <meta property="og:title" content="Exclusive Giveaway: iPhone 17 Pro or €500 Amazon Gift Card!">
+    <meta property="og:description" content="Three simple steps to enter the giveaway. Choose your prize and enter now!">
+    <meta property="og:image" content="https://i.postimg.cc/K4TwY3WC/prores-da2ay2urzh4y-large.png">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://gethu.tech/">
+    <meta name="twitter:title" content="Win an iPhone 17 Pro or a €500 Amazon Gift Card">
+    <meta name="twitter:description" content="Participate in our exclusive giveaway. Choose your prize and enter now!">
+    <meta name="twitter:image" content="https://i.postimg.cc/K4TwY3WC/prores-da2ay2urzh4y-large.png">
+    
+    <!-- Scripts and Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* Modern Reset & Base Styles */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        /* Custom Styles */
+        :root {
+            --background-start-rgb: 10, 10, 10;
+            --background-end-rgb: 23, 16, 41;
+            --glow-color-1: rgb(139, 92, 246);
+            --glow-color-2: rgb(255, 153, 0);
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
 
         body {
-            background-color: #020617; /* Dark Slate */
-            color: #f8fafc; /* White text */
-            line-height: 1.6;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0A;
+            color: #E5E7EB;
         }
-
-        /* Navigation */
-        nav {
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            letter-spacing: 0.05em;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo-icon {
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, #10b981, #06b6d4);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-        }
-
-        /* Hero Section */
-        .hero {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 4rem 1.5rem;
-            background: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-            background: linear-gradient(to bottom, #ffffff, #94a3b8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        p.subtitle {
-            font-size: 1.25rem;
-            color: #94a3b8;
-            max-width: 600px;
-            margin-bottom: 2.5rem;
-        }
-
-        /* CTA Button */
-        .cta-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .btn {
-            background: #10b981; /* Emerald Green */
-            color: white;
-            padding: 1rem 2.5rem;
-            font-size: 1.1rem;
-            font-weight: 700;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            background: #059669;
-            box-shadow: 0 0 30px rgba(16, 185, 129, 0.5);
-        }
-
-        .offer-text {
-            font-size: 0.9rem;
-            color: #6ee7b7; /* Light Emerald */
-            max-width: 300px;
-            font-weight: 500;
-        }
-
-        /* Footer */
-        footer {
-            padding: 2rem;
-            text-align: center;
-            color: #475569;
-            font-size: 0.875rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            nav { padding: 1rem; }
-        }
-    </style>
-</head>
-<body>
-
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">
-            <div class="logo-icon">⬢</div>
-            PROSNOZ
-        </div>
-    </nav>
-
-    <!-- Hero Content -->
-    <div class="hero">
-        <h1>Automate your workflow<br>at lightspeed.</h1>
         
-        <p class="subtitle">
-            Stop wrestling with complex infrastructure. Prosnoz provides the tools you need to build, deploy, and scale your applications in minutes.
-        </p>
+        .aurora-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
 
-        <div class="cta-container">
-            <!-- 
-               Safe trigger: Tries the locker, falls back to direct link on error.
-            -->
-            <a href="javascript:void(0)" onclick="handleOfferTrigger()" class="btn">
-                Get Automation Free
-            </a>
-            
-            <div class="offer-text">
-                Complete just one offer and you will get the full automation for free in your mail.
+        .aurora-background::before, .aurora-background::after {
+            content: '';
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            background-image: radial-gradient(circle, var(--glow-color-1) 0%, transparent 60%);
+            border-radius: 50%;
+            opacity: 0.15;
+            filter: blur(100px);
+            will-change: transform;
+        }
+        
+        .aurora-background::before {
+            top: -20%;
+            left: -20%;
+            animation: rotate 25s linear infinite;
+        }
+
+        .aurora-background::after {
+            bottom: -20%;
+            right: -20%;
+            background-image: radial-gradient(circle, var(--glow-color-2) 0%, transparent 60%);
+            animation: rotate 30s linear infinite reverse;
+        }
+        
+        .main-card-3d {
+            transform-style: preserve-3d;
+            transform: rotateY(-10deg) rotateX(10deg) scale(0.95);
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: 0 50px 100px -20px rgba(0,0,0,0.4);
+        }
+        .main-card-3d:hover {
+            transform: rotateY(0) rotateX(0) scale(1);
+        }
+
+        /* 3D Button Styles */
+        .btn-3d {
+            position: relative;
+            border: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            will-change: transform, box-shadow;
+            transform-style: preserve-3d;
+            border-radius: 0.75rem; /* 12px */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .btn-3d span {
+            display: block;
+            position: relative;
+            z-index: 1;
+            padding: 1rem 1.5rem;
+            border-radius: 0.75rem;
+            background: linear-gradient(rgba(255,255,255,0.05), rgba(255,255,255,0));
+        }
+
+        .btn-3d::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0.75rem;
+            transform: translateZ(-1px) translateY(6px); /* Increased depth */
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        .btn-3d:hover { transform: translateY(-3px); }
+        .btn-3d:active { transform: translateY(3px); } /* More realistic press */
+
+        /* Amazon Button */
+        .btn-amazon { background-color: #FF9900; color: #131921; }
+        .btn-amazon::before { background-color: #CC7A00; }
+        .btn-amazon:hover { box-shadow: 0 10px 25px rgba(255, 153, 0, 0.2); }
+        
+        /* iPhone Button */
+        .btn-iphone { background-color: #8B5CF6; color: white; }
+        .btn-iphone::before { background-color: #6D28D9; }
+        .btn-iphone:hover { box-shadow: 0 10px 25px rgba(139, 92, 246, 0.2); }
+        
+        /* Contact Button */
+        .btn-contact { background-color: rgba(31, 41, 55, 0.5); color: white; backdrop-filter: blur(5px); }
+        .btn-contact::before { background-color: #111827; }
+        .btn-contact:hover { box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+
+        /* 3D Apple Icon Style */
+        .apple-icon-3d {
+            font-size: 150px;
+            color: #f3f4f6;
+            filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.5));
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease-out;
+            transform: rotateY(15deg) rotateX(10deg) translateZ(20px);
+        }
+        .apple-icon-3d:hover {
+            transform: rotateY(0deg) rotateX(0deg) scale(1.1) translateZ(50px);
+            filter: drop-shadow(0px 0px 30px rgba(255, 255, 255, 0.3));
+            color: #ffffff;
+        }
+        
+        .step-icon {
+            transition: transform 0.3s ease;
+        }
+        .step-icon:hover {
+            transform: scale(1.2) translateY(-3px);
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            background: rgba(0,0,0,0.7);
+            backdrop-filter: blur(10px);
+            transition: opacity 0.3s ease;
+        }
+        .modal-content {
+            background: #111827;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        
+        /* Progress Bar Style */
+        .progress-bar-custom { background: linear-gradient(90deg, #8B5CF6, #c084fc); }
+    </style>
+
+    <!-- Ad Script -->
+    <script src="https://fpyf8.com/88/tag.min.js" data-zone="183858" async data-cfasync="false"></script>
+    
+    <!-- CPAGrip Content Locker Script -->
+    <script type="text/javascript" src="https://playabledownloads.com/script_include.php?id=1854684"></script>
+</head>
+<body class="antialiased overflow-x-hidden">
+    <div class="aurora-background"></div>
+    
+    <!-- Main Content -->
+    <main class="relative min-h-screen flex flex-col items-center justify-center p-4 pt-10 sm:p-6 lg:p-8 overflow-hidden" style="perspective: 2000px;">
+        <div class="w-full max-w-6xl mx-auto bg-black bg-opacity-20 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl overflow-hidden p-6 sm:p-10 lg:p-12 transition-all duration-500 main-card-3d">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                
+                <!-- Left Column: Apple Icon -->
+                <div class="flex items-center justify-center lg:order-2" style="perspective: 2000px;">
+                    <!-- Replaced Image with FontAwesome Apple Icon -->
+                    <i class="fa-brands fa-apple apple-icon-3d"></i>
+                </div>
+
+                <!-- Right Column: Text & CTAs -->
+                <div class="text-center lg:text-left lg:order-1">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 leading-tight" style="text-shadow: 0 2px 5px rgba(0,0,0,0.5), 0 0 30px rgba(255,255,255,0.1);">Grand Giveaway Event!</h1>
+                    <p class="mt-4 text-lg sm:text-xl text-gray-400 max-w-md mx-auto lg:mx-0">We're giving away 20 iPhone 17 Pros & 20 €500 Amazon Gift Cards! Enter now in 3 easy steps.</p>
+                    
+                    <!-- Steps -->
+                    <div class="mt-8 flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 sm:gap-6 text-gray-300">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-trophy text-purple-400 text-xl step-icon"></i>
+                            <span class="font-medium">Choose Prize</span>
+                        </div>
+                        <span class="hidden sm:block text-gray-600 font-light">→</span>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-to-slot text-purple-400 text-xl step-icon"></i>
+                            <span class="font-medium">Complete Offer</span>
+                        </div>
+                        <span class="hidden sm:block text-gray-600 font-light">→</span>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-award text-purple-400 text-xl step-icon"></i>
+                            <span class="font-medium">Confirm Entry</span>
+                        </div>
+                    </div>
+
+                    <!-- Countdown Timer -->
+                    <div class="my-10">
+                        <div class="w-full h-2 bg-white/10 rounded-full mb-4 overflow-hidden">
+                            <div id="progress-bar" class="h-full progress-bar-custom rounded-full transition-all duration-1000 ease-linear"></div>
+                        </div>
+                        <div class="grid grid-cols-4 gap-2 sm:gap-4 text-center">
+                            <div>
+                                <div id="days" class="text-3xl sm:text-4xl font-bold text-white">00</div>
+                                <div class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Days</div>
+                            </div>
+                            <div>
+                                <div id="hours" class="text-3xl sm:text-4xl font-bold text-white">00</div>
+                                <div class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Hours</div>
+                            </div>
+                            <div>
+                                <div id="minutes" class="text-3xl sm:text-4xl font-bold text-white">00</div>
+                                <div class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Minutes</div>
+                            </div>
+                            <div>
+                                <div id="seconds" class="text-3xl sm:text-4xl font-bold text-white">00</div>
+                                <div class="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">Seconds</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="mt-8 flex flex-col space-y-4">
+                        <!-- Content Locker script usually attaches to these IDs -->
+                        <button id="iphone-link" class="btn-3d btn-iphone w-full text-center font-bold text-lg"><span>Enter for iPhone 17 Pro</span></button>
+                        <button id="amazon-link" class="btn-3d btn-amazon w-full text-center font-bold text-lg"><span>Enter for €500 Amazon Gift Card</span></button>
+                        <button id="contact-btn" class="btn-3d btn-contact w-full text-center font-medium text-base"><span>Contact Manager to Complete Offer</span></button>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="w-full max-w-6xl mx-auto text-center mt-8 pb-6">
+             <div class="flex justify-center space-x-6 mb-4">
+                 <a href="#" aria-label="Twitter" class="text-gray-500 hover:text-purple-400 transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.223.085a4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg></a>
+                 <a href="#" aria-label="Facebook" class="text-gray-500 hover:text-purple-400 transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.589 0 0 .589 0 1.325v21.351C0 23.411.589 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.736 0 1.325-.589 1.325-1.325V1.325C24 .589 23.411 0 22.675 0z"></path></svg></a>
+             </div>
+            <div class="flex justify-center space-x-4 sm:space-x-6 text-sm text-gray-400 mb-4">
+                <button id="rules-btn" class="hover:text-purple-400 transition-colors">Rules & Contact</button>
+                <button id="refer-btn" class="hover:text-purple-400 transition-colors">Refer a Friend</button>
+            </div>
+            <p class="text-xs text-gray-500">Not affiliated with Apple or Amazon.</p>
+        </footer>
+    </main>
+
+    <!-- Modals (Contact, Rules, Refer) -->
+    <div id="contact-modal" class="modal-overlay fixed inset-0 flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none">
+        <div class="modal-content w-full max-w-md p-6 sm:p-8 rounded-2xl text-center transform scale-95 opacity-0">
+             <i class="fas fa-envelope-open-text text-4xl text-purple-400 mb-4"></i>
+             <h3 class="text-2xl font-bold text-white">Contact Information</h3>
+            <p class="mt-2 text-gray-400">To complete your offer, please contact our support manager. Copy the email address below.</p>
+            <div class="mt-6 p-3 bg-black/30 border border-white/10 rounded-lg flex items-center justify-between">
+                <span class="font-mono text-gray-300">support@trustedsponsor.de</span>
+                <button id="copy-email-btn" class="px-4 py-2 bg-purple-500 text-white text-sm font-semibold rounded-md hover:bg-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-all">Copy</button>
+            </div>
+            <p id="copy-success-msg" class="mt-2 text-sm text-green-400 opacity-0 transition-opacity">Copied!</p>
+            <button id="close-contact-modal-btn" class="mt-6 w-full py-2 bg-white/10 text-gray-300 font-semibold rounded-lg hover:bg-white/20 transition-colors">Close</button>
+        </div>
+    </div>
+    
+    <div id="rules-modal" class="modal-overlay fixed inset-0 flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none">
+        <div class="modal-content w-full max-w-lg p-6 sm:p-8 rounded-2xl text-left transform scale-95 opacity-0 overflow-y-auto max-h-[90vh]">
+             <h3 class="text-2xl font-bold text-white text-center">Rules, Eligibility & Contact</h3>
+            <div class="mt-6 space-y-4 text-sm text-gray-400">
+                <div><h4 class="font-bold text-gray-200">Eligibility</h4><p>Entrants must be 18 years or older and reside in eligible regions. Employees of the sponsor and their immediate family members are not eligible to participate.</p></div>
+                <div><h4 class="font-bold text-gray-200">How to Enter</h4><p>To enter, select your desired prize on the main page, click the button, and complete the partner offer. Only one entry per person is valid.</p></div>
+                <div><h4 class="font-bold text-gray-200">Winner Selection</h4><p>The 40 winners (20 per prize) will be randomly selected from all valid entries after the giveaway end date. Winners will be notified by email and will have 7 days to respond to claim their prize.</p></div>
+                <div><h4 class="font-bold text-gray-200">Contact</h4><p>For any questions regarding this giveaway, please contact us at: <span class="font-mono text-purple-400">support@trustedsponsor.de</span>.</p></div>
+            </div>
+            <button id="close-rules-modal-btn" class="mt-8 w-full py-2 bg-white/10 text-gray-300 font-semibold rounded-lg hover:bg-white/20 transition-colors">Close</button>
+        </div>
+    </div>
+    
+    <div id="refer-modal" class="modal-overlay fixed inset-0 flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none">
+        <div class="modal-content w-full max-w-md p-6 sm:p-8 rounded-2xl text-center transform scale-95 opacity-0">
+            <i class="fas fa-users text-4xl text-purple-400 mb-4"></i>
+            <h3 class="text-2xl font-bold text-white">Invite Friends & Win More!</h3>
+            <p class="mt-2 text-gray-400">Increase your chances of winning! For every friend who enters through your unique link, you'll receive an extra entry.</p>
+            <div class="mt-6 p-3 bg-black/30 border border-white/10 rounded-lg flex items-center justify-between">
+                <input id="referral-link-input" type="text" readonly value="https://gethu.tech/?ref=USER123" class="font-mono text-gray-300 bg-transparent w-full focus:outline-none">
+                <button id="copy-referral-btn" class="px-4 py-2 bg-purple-500 text-white text-sm font-semibold rounded-md hover:bg-purple-600">Copy</button>
+            </div>
+            <p id="copy-referral-success-msg" class="mt-2 text-sm text-green-400 opacity-0 transition-opacity">Copied!</p>
+            <button id="close-refer-modal-btn" class="mt-6 w-full py-2 bg-white/10 text-gray-300 font-semibold rounded-lg hover:bg-white/20">Close</button>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        &copy; 2024 Prosnoz Inc. All rights reserved.
-    </footer>
-
-    <!-- Safe Trigger Script -->
     <script>
-        function handleOfferTrigger() {
-            var fallbackUrl = "https://playabledownloads.com/1853687";
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // --- GLOBAL VARS ---
+            const managerEmail = 'support@trustedsponsor.de';
             
-            try {
-                if (typeof call_locker === 'function') {
-                    call_locker();
-                } else {
-                    // Locker script blocked or failed to load
-                    window.open(fallbackUrl, '_blank');
-                }
-            } catch (e) {
-                console.log("Locker error caught, using fallback.", e);
-                // Security error caught, redirect manually
-                window.open(fallbackUrl, '_blank');
+            // --- ELEMENTS ---
+            const allModals = document.querySelectorAll('.modal-overlay');
+            const contactModal = document.getElementById('contact-modal');
+            const rulesModal = document.getElementById('rules-modal');
+            const referModal = document.getElementById('refer-modal');
+
+            // --- FUNCTIONS ---
+            function openModal(modalEl) {
+                if (!modalEl) return;
+                const modalContent = modalEl.querySelector('.modal-content');
+                modalEl.classList.remove('pointer-events-none', 'opacity-0');
+                if (modalContent) modalContent.classList.remove('scale-95', 'opacity-0');
             }
-        }
+
+            function closeModal(modalEl) {
+                if (!modalEl) return;
+                const modalContent = modalEl.querySelector('.modal-content');
+                modalEl.classList.add('opacity-0');
+                if (modalContent) modalContent.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => modalEl.classList.add('pointer-events-none'), 300);
+            }
+
+            function copyToClipboard(text, successElement) {
+                 // Fallback for environments where navigator.clipboard is not available
+                if (!navigator.clipboard) {
+                    try {
+                        const textArea = document.createElement("textarea");
+                        textArea.value = text;
+                        textArea.style.position = "fixed";  // Avoid scrolling to bottom
+                        document.body.appendChild(textArea);
+                        textArea.focus();
+                        textArea.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(textArea);
+                        
+                        successElement.classList.remove('opacity-0');
+                        setTimeout(() => successElement.classList.add('opacity-0'), 2000);
+                    } catch (err) {
+                        console.error('Fallback: Could not copy text: ', err);
+                    }
+                    return;
+                }
+                
+                navigator.clipboard.writeText(text).then(() => {
+                     successElement.classList.remove('opacity-0');
+                     setTimeout(() => successElement.classList.add('opacity-0'), 2000);
+                 }).catch(err => {
+                     console.error('Async: Could not copy text: ', err);
+                 });
+            }
+            
+            // --- MAIN EVENT LISTENERS ---
+            
+            const contactBtn = document.getElementById('contact-btn');
+            if(contactBtn) contactBtn.addEventListener('click', (e) => {
+                openModal(contactModal);
+            });
+
+            const rulesBtn = document.getElementById('rules-btn');
+            if(rulesBtn) rulesBtn.addEventListener('click', () => openModal(rulesModal));
+
+            const referBtn = document.getElementById('refer-btn');
+            if(referBtn) referBtn.addEventListener('click', () => openModal(referModal));
+            
+            allModals.forEach(modal => {
+                modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(modal); });
+                const closeBtn = modal.querySelector('[id^="close-"][id$="-btn"]');
+                if(closeBtn) closeBtn.addEventListener('click', () => closeModal(modal));
+            });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') allModals.forEach(closeModal); });
+            
+            const copyEmailBtn = document.getElementById('copy-email-btn');
+            if(copyEmailBtn) copyEmailBtn.addEventListener('click', () => copyToClipboard(managerEmail, document.getElementById('copy-success-msg')));
+
+            const copyReferralBtn = document.getElementById('copy-referral-btn');
+            if(copyReferralBtn) copyReferralBtn.addEventListener('click', () => copyToClipboard(document.getElementById('referral-link-input').value, document.getElementById('copy-referral-success-msg')));
+
+            // --- COUNTDOWN TIMER ---
+            const endDate = new Date().getTime() + (67 * 24 * 60 * 60 * 1000); // 67 days from now
+            const totalDuration = endDate - new Date().getTime();
+            
+            setInterval(() => {
+                const now = new Date().getTime();
+                const distance = endDate - now;
+                
+                const dayEl = document.getElementById('days');
+                if(dayEl) dayEl.textContent = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, '0');
+
+                const hourEl = document.getElementById('hours');
+                if(hourEl) hourEl.textContent = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+
+                const minEl = document.getElementById('minutes');
+                if(minEl) minEl.textContent = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+
+                const secEl = document.getElementById('seconds');
+                if(secEl) secEl.textContent = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
+                
+                const progress = Math.max(0, ((totalDuration - distance) / totalDuration) * 100);
+                const progressEl = document.getElementById('progress-bar');
+                if(progressEl) progressEl.style.width = `${progress}%`;
+            }, 1000);
+            
+        });
     </script>
 </body>
 </html>
