@@ -167,6 +167,43 @@
             transform: translateY(1px);
         }
 
+        /* Conversion Optimized Styles */
+        .pulse-btn {
+            animation: pulse-glow 2s infinite;
+        }
+
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(6, 182, 212, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+        }
+
+        .toast-notification {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-left: 4px solid #06b6d4;
+            backdrop-filter: blur(10px);
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            transform: translateY(150%);
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            pointer-events: none;
+        }
+
+        .toast-show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
         /* Modals */
         .modal-overlay {
             background: rgba(2, 6, 23, 0.85);
@@ -227,73 +264,75 @@
 
                 <!-- Right Column: Text & CTAs -->
                 <div class="text-center lg:text-left lg:order-1">
-                    <div class="inline-block px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide bg-gradient-to-r from-cyan-500/20 to-violet-500/20 border border-cyan-500/30 text-cyan-200 mb-6">
-                        🔥 Exclusive Event 2026
+                    <div class="inline-block px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 mb-6">
+                        <i class="fa-solid fa-shield-check mr-1"></i> Verified Official Promotion
                     </div>
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white via-slate-200 to-slate-500 leading-tight mb-4">
-                        Choose Your Ultimate Reward
+                        Claim Your Prize Now
                     </h1>
-                    <p class="text-lg sm:text-xl text-slate-300 max-w-lg mx-auto lg:mx-0 font-light">
-                        We are giving away 20 brand-new iPhone 17 Pros and 20 €500 Amazon Gift Cards. Secure your entry today before the timer runs out!
+                    <p class="text-lg sm:text-xl text-slate-300 max-w-lg mx-auto lg:mx-0 font-light mb-6">
+                        Due to extreme demand, we require a quick verification. <strong>Select your reward below</strong> to unlock your entry immediately!
                     </p>
                     
-                    <!-- Steps -->
-                    <div class="mt-8 flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4 sm:gap-6 text-slate-200 font-medium">
-                        <div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/10">
-                            <span class="flex items-center justify-center w-6 h-6 rounded-full bg-cyan-500/20 text-cyan-400 text-xs">1</span>
-                            <span>Select Prize</span>
+                    <!-- High-Conversion Steps -->
+                    <div class="flex flex-col space-y-3 text-left bg-white/5 p-5 rounded-xl border border-cyan-500/20 mb-8 shadow-inner">
+                        <div class="flex items-center gap-3 text-slate-200">
+                            <span class="flex items-center justify-center w-6 h-6 rounded-full bg-cyan-500/20 text-cyan-400 text-xs font-bold border border-cyan-500/30">1</span>
+                            <span class="font-medium text-sm sm:text-base">Click your preferred prize below.</span>
                         </div>
-                        <i class="fa-solid fa-chevron-right text-slate-600 hidden sm:block text-sm"></i>
-                        <div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/10">
-                            <span class="flex items-center justify-center w-6 h-6 rounded-full bg-violet-500/20 text-violet-400 text-xs">2</span>
-                            <span>Verify Entry</span>
+                        <div class="flex items-center gap-3 text-slate-200">
+                            <span class="flex items-center justify-center w-6 h-6 rounded-full bg-violet-500/20 text-violet-400 text-xs font-bold border border-violet-500/30">2</span>
+                            <span class="font-medium text-sm sm:text-base">Complete a quick sponsor survey (1 min).</span>
                         </div>
-                        <i class="fa-solid fa-chevron-right text-slate-600 hidden sm:block text-sm"></i>
-                        <div class="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/10">
-                            <span class="flex items-center justify-center w-6 h-6 rounded-full bg-pink-500/20 text-pink-400 text-xs">3</span>
-                            <span>Win Big</span>
+                        <div class="flex items-center gap-3 text-slate-200">
+                            <span class="flex items-center justify-center w-6 h-6 rounded-full bg-pink-500/20 text-pink-400 text-xs font-bold border border-pink-500/30">3</span>
+                            <span class="font-medium text-sm sm:text-base">Enter shipping details. Done!</span>
                         </div>
                     </div>
 
                     <!-- Countdown Timer -->
-                    <div class="mt-10 p-6 rounded-2xl bg-black/20 border border-white/5 backdrop-blur-sm">
-                        <div class="flex justify-between text-sm font-medium text-slate-400 mb-3 uppercase tracking-widest">
-                            <span>Event Closes In</span>
-                        </div>
-                        <div class="w-full h-1.5 bg-slate-800 rounded-full mb-6 overflow-hidden">
-                            <div id="progress-bar" class="h-full bg-gradient-to-r from-cyan-400 to-violet-500 rounded-full transition-all duration-1000 w-full shadow-[0_0_10px_rgba(6,182,212,0.8)]"></div>
+                    <div class="mt-8 p-6 rounded-2xl bg-black/40 border border-red-500/20 backdrop-blur-sm relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-600 to-orange-500"></div>
+                        <div class="flex justify-between text-sm font-bold text-red-400 mb-3 uppercase tracking-widest animate-pulse">
+                            <span><i class="fa-solid fa-clock mr-1"></i> Event Closes In</span>
                         </div>
                         <div class="grid grid-cols-4 gap-2 sm:gap-4 text-center divide-x divide-white/10">
                             <div>
                                 <div id="days" class="text-3xl sm:text-4xl font-bold text-white font-mono tracking-tight">00</div>
-                                <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Days</div>
+                                <div class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-widest mt-1">Days</div>
                             </div>
                             <div>
                                 <div id="hours" class="text-3xl sm:text-4xl font-bold text-white font-mono tracking-tight">00</div>
-                                <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Hours</div>
+                                <div class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-widest mt-1">Hours</div>
                             </div>
                             <div>
                                 <div id="minutes" class="text-3xl sm:text-4xl font-bold text-white font-mono tracking-tight">00</div>
-                                <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Mins</div>
+                                <div class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-widest mt-1">Mins</div>
                             </div>
                             <div>
-                                <div id="seconds" class="text-3xl sm:text-4xl font-bold text-cyan-400 font-mono tracking-tight">00</div>
-                                <div class="text-xs text-slate-400 uppercase tracking-widest mt-1">Secs</div>
+                                <div id="seconds" class="text-3xl sm:text-4xl font-bold text-red-400 font-mono tracking-tight">00</div>
+                                <div class="text-[10px] sm:text-xs text-slate-400 uppercase tracking-widest mt-1">Secs</div>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- CTA Buttons -->
-                    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <button id="iphone-link" class="btn-premium flex items-center justify-center gap-3 w-full py-4 px-6 bg-gradient-to-r from-slate-700 to-slate-900 border border-slate-600 rounded-xl text-white font-bold text-lg shadow-lg">
-                            <i class="fa-brands fa-apple text-xl"></i> Claim iPhone 17 Pro
+                    <!-- CTA Buttons (Optimized for CPA with explicit trigger) -->
+                    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <button id="iphone-link" onclick="if(typeof call_locker === 'function') call_locker();" class="btn-premium pulse-btn flex flex-col items-center justify-center gap-1 w-full py-4 px-4 bg-gradient-to-r from-slate-700 to-slate-900 border-2 border-cyan-500/50 rounded-xl text-white font-bold shadow-[0_0_15px_rgba(6,182,212,0.3)] hover:border-cyan-400 transition-colors">
+                            <span class="flex items-center gap-2 text-lg"><i class="fa-brands fa-apple text-xl"></i> Claim iPhone</span>
+                            <span class="text-xs text-cyan-300 font-normal">Only 3 remaining!</span>
                         </button>
-                        <button id="amazon-link" class="btn-premium flex items-center justify-center gap-3 w-full py-4 px-6 bg-gradient-to-r from-yellow-500 to-orange-500 border border-yellow-400/50 rounded-xl text-slate-900 font-bold text-lg shadow-lg">
-                            <i class="fa-brands fa-amazon text-xl"></i> Claim €500 Card
+                        <button id="amazon-link" onclick="if(typeof call_locker === 'function') call_locker();" class="btn-premium pulse-btn flex flex-col items-center justify-center gap-1 w-full py-4 px-4 bg-gradient-to-r from-yellow-600 to-orange-600 border-2 border-yellow-400/50 rounded-xl text-white font-bold shadow-[0_0_15px_rgba(234,179,8,0.3)] hover:border-yellow-300 transition-colors">
+                            <span class="flex items-center gap-2 text-lg"><i class="fa-brands fa-amazon text-xl"></i> Claim €500</span>
+                            <span class="text-xs text-yellow-200 font-normal">Instant Digital Delivery</span>
                         </button>
-                        <button id="contact-btn" class="btn-premium sm:col-span-2 flex items-center justify-center gap-2 w-full py-3 px-6 bg-white/5 border border-white/10 hover:bg-white/10 rounded-xl text-slate-300 font-medium transition-colors">
-                            <i class="fa-solid fa-headset"></i> Need Help Verifying? Contact Support
-                        </button>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-slate-400 text-xs font-medium">
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-lock text-emerald-400"></i> 256-Bit Secure</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-bolt text-yellow-400"></i> Fast Delivery</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-cyan-400"></i> Anti-Fraud Protected</div>
                     </div>
                 </div>
             </div>
@@ -318,6 +357,16 @@
             </p>
         </footer>
     </main>
+
+    <!-- Social Proof Toast (Boosts Conversions) -->
+    <div id="proof-toast" class="toast-notification">
+        <img src="https://i.pravatar.cc/100?img=1" id="toast-img" class="w-10 h-10 rounded-full border border-cyan-500/50" alt="User">
+        <div>
+            <p class="text-sm text-white font-medium" id="toast-name">Sarah M. <span class="text-slate-400 text-xs font-light">just claimed</span></p>
+            <p class="text-xs text-cyan-400 font-bold" id="toast-prize">iPhone 17 Pro</p>
+            <p class="text-[10px] text-slate-500 mt-0.5" id="toast-time">2 seconds ago</p>
+        </div>
+    </div>
 
     <!-- Modals -->
     
@@ -510,11 +559,50 @@
                 
                 // Update progress bar
                 const progress = Math.max(0, ((totalDuration - distance) / totalDuration) * 100);
-                document.getElementById('progress-bar').style.width = `${progress}%`;
+                const progressBar = document.getElementById('progress-bar');
+                if (progressBar) progressBar.style.width = `${progress}%`;
             }
             
             setInterval(updateTimer, 1000);
             updateTimer(); // Initial call
+
+            // --- SOCIAL PROOF TOAST LOGIC (CONVERSION BOOSTER) ---
+            const names = ['Michael T.', 'Sarah J.', 'David W.', 'Emma L.', 'James R.', 'Olivia P.', 'Daniel K.', 'Sophia M.', 'John D.', 'Alex B.'];
+            const prizes = ['an iPhone 17 Pro', 'a €500 Amazon Gift Card'];
+            const times = ['just now', '12 seconds ago', '24 seconds ago', '1 minute ago', 'a few seconds ago'];
+            
+            function showToast() {
+                const toast = document.getElementById('proof-toast');
+                if (!toast) return;
+
+                // Randomize data
+                const randomName = names[Math.floor(Math.random() * names.length)];
+                const randomPrize = prizes[Math.floor(Math.random() * prizes.length)];
+                const randomTime = times[Math.floor(Math.random() * times.length)];
+                const randomImg = Math.floor(Math.random() * 70) + 1;
+
+                document.getElementById('toast-name').innerHTML = `${randomName} <span class="text-slate-400 text-xs font-light">just claimed</span>`;
+                document.getElementById('toast-prize').textContent = randomPrize;
+                document.getElementById('toast-time').textContent = randomTime;
+                document.getElementById('toast-img').src = `https://i.pravatar.cc/100?img=${randomImg}`;
+
+                // Show toast
+                toast.classList.add('toast-show');
+
+                // Hide after 4.5 seconds
+                setTimeout(() => {
+                    toast.classList.remove('toast-show');
+                }, 4500);
+            }
+
+            // Show first toast after 2 seconds, then periodically
+            setTimeout(() => {
+                showToast();
+                setInterval(() => {
+                    if (Math.random() > 0.25) showToast(); // 75% chance to show every 12s
+                }, 12000);
+            }, 2000);
+
         });
     </script>
 </body>
