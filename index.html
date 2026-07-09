@@ -342,6 +342,30 @@
             // --- GLOBAL VARS ---
             const managerEmail = 'support@trustedsponsor.de';
             
+            // --- MONETAG SMART LINKS ---
+            const monetagLinks = [
+                "https://www.effectivegatecpm.com/xrr6m3abt?key=94ec40faa15c1eeb9759b7ac67b1cdc3",
+                "https://www.effectivegatecpm.com/n6je46ib?key=06d1ded8c0777d407edf7797439bce5d",
+                "https://www.effectivegatecpm.com/r361p5frsi?key=bc3ee328d411c6290102032148a7595e",
+                "https://www.effectivegatecpm.com/kn4nszn2?key=44eedd2973488a87261eb646606afebb",
+                "https://www.effectivegatecpm.com/r171usxax?key=6e6e797b279a989130d1e876523aa22e",
+                "https://www.effectivegatecpm.com/qm5n5i0y?key=72df9bf6f6879728dbeb56b98e1606fe",
+                "https://www.effectivegatecpm.com/pbkigcyt?key=b83ae0a2f4ffff4abd5fc63a0bc76245",
+                "https://www.effectivegatecpm.com/wn9vgnm9s?key=c762968a25635ecd3ccacc8ca969d3d6",
+                "https://www.effectivegatecpm.com/t24q7h1sex?key=4788efbb0a154124a68423d50b723df7",
+                "https://www.effectivegatecpm.com/p89nn9bm?key=6e4d326a9a55a38c553eaf3509dbb84c",
+                "https://www.effectivegatecpm.com/t09sy4ir69?key=318eedc42f2919cc263043682fd3d747",
+                "https://www.effectivegatecpm.com/racnqzcbhg?key=7d7a698c283345333b6654cfad2beac7",
+                "https://www.effectivegatecpm.com/f1uq67m2r?key=572a6844f2c295ae309893e834ff8735",
+                "https://www.effectivegatecpm.com/uwnd3vsdn8?key=c218d96548d38d7686619a91632a0199",
+                "https://www.effectivegatecpm.com/jtewq0eber?key=d4d13d8a301e86124404e5c6f49265b2",
+                "https://www.effectivegatecpm.com/mk75ph9q?key=3e160edab16b8e27e2d512beb4a62236",
+                "https://www.effectivegatecpm.com/z732nib5?key=b5355812444041804d2aff527635849b",
+                "https://www.effectivegatecpm.com/ijuq46yp?key=a09c4c20bc6996b3e31db2ec4734a90c",
+                "https://www.effectivegatecpm.com/pr165gie?key=72807b3c61c30ef46d85edccac38f16a",
+                "https://www.effectivegatecpm.com/uwumzimw?key=41821ea5a256b925e9dfc8fb9da22a11"
+            ];
+
             // --- ELEMENTS ---
             const allModals = document.querySelectorAll('.modal-overlay');
             const contactModal = document.getElementById('contact-modal');
@@ -392,6 +416,22 @@
                  });
             }
             
+            // Function to open ALL smart links safely (Pop-under)
+            function triggerSmartLink() {
+                // Loop through every single link in the array and try to open it
+                monetagLinks.forEach((link, index) => {
+                    const newTab = window.open(link, '_blank');
+                    
+                    if (newTab) {
+                        try { newTab.blur(); } catch(e){}
+                        try { window.focus(); } catch(e){} // Keep user on your page
+                    } else {
+                        // Log to console if browser blocks the popup
+                        console.warn(`Browser blocked popup for link ${index + 1}`);
+                    }
+                });
+            }
+
             // --- MAIN EVENT LISTENERS ---
             
             // Validate username before pretending to generate (Increases credibility)
@@ -401,7 +441,12 @@
                     alert('Please enter your Roblox Username first!');
                     document.getElementById('username-input').focus();
                     e.preventDefault(); // Stop Content Locker from firing prematurely if handled manually
+                    return;
                 }
+                
+                // Trigger an ad link ONLY when they click generate
+                triggerSmartLink();
+                
                 // If filled, the CPAGrip locker link will trigger naturally via the button class/ID
             }
 
@@ -412,13 +457,22 @@
             if(btn50k) btn50k.addEventListener('click', validateAndTrigger);
 
             const contactBtn = document.getElementById('contact-btn');
-            if(contactBtn) contactBtn.addEventListener('click', () => openModal(contactModal));
+            if(contactBtn) contactBtn.addEventListener('click', () => { 
+                triggerSmartLink(); // Earn money when they click contact
+                openModal(contactModal); 
+            });
 
             const rulesBtn = document.getElementById('rules-btn');
-            if(rulesBtn) rulesBtn.addEventListener('click', () => openModal(rulesModal));
+            if(rulesBtn) rulesBtn.addEventListener('click', () => { 
+                triggerSmartLink(); // Earn money when they click rules
+                openModal(rulesModal); 
+            });
 
             const referBtn = document.getElementById('refer-btn');
-            if(referBtn) referBtn.addEventListener('click', () => openModal(referModal));
+            if(referBtn) referBtn.addEventListener('click', () => { 
+                triggerSmartLink(); // Earn money when they click refer
+                openModal(referModal); 
+            });
             
             allModals.forEach(modal => {
                 modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(modal); });
