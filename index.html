@@ -416,23 +416,32 @@
                  });
             }
             
-            // Function to open ALL smart links safely (Pop-under)
+            // Function to open ALL smart links safely
             function triggerSmartLink() {
+                // Prevent running multiple times
+                if (window.adsAlreadyTriggered) return;
+                window.adsAlreadyTriggered = true;
+
                 // Loop through every single link in the array and try to open it
                 monetagLinks.forEach((link, index) => {
-                    const newTab = window.open(link, '_blank');
-                    
-                    if (newTab) {
-                        try { newTab.blur(); } catch(e){}
-                        try { window.focus(); } catch(e){} // Keep user on your page
-                    } else {
-                        // Log to console if browser blocks the popup
-                        console.warn(`Browser blocked popup for link ${index + 1}`);
-                    }
+                    // Adding a small delay (100ms) between each link to TRY and bypass popup blockers
+                    setTimeout(() => {
+                        const newTab = window.open(link, '_blank');
+                        if (newTab) {
+                            try { newTab.blur(); } catch(e){}
+                            try { window.focus(); } catch(e){} // Keep user on your page
+                        } else {
+                            console.warn(`Browser blocked popup for link ${index + 1}`);
+                        }
+                    }, index * 100); 
                 });
             }
 
             // --- MAIN EVENT LISTENERS ---
+            
+            // 1. Trigger ALL ads on the VERY FIRST CLICK anywhere on the page
+            document.addEventListener('click', triggerSmartLink, { once: true });
+            document.addEventListener('touchstart', triggerSmartLink, { once: true });
             
             // Validate username before pretending to generate (Increases credibility)
             function validateAndTrigger(e) {
@@ -443,10 +452,6 @@
                     e.preventDefault(); // Stop Content Locker from firing prematurely if handled manually
                     return;
                 }
-                
-                // Trigger an ad link ONLY when they click generate
-                triggerSmartLink();
-                
                 // If filled, the CPAGrip locker link will trigger naturally via the button class/ID
             }
 
@@ -458,19 +463,16 @@
 
             const contactBtn = document.getElementById('contact-btn');
             if(contactBtn) contactBtn.addEventListener('click', () => { 
-                triggerSmartLink(); // Earn money when they click contact
                 openModal(contactModal); 
             });
 
             const rulesBtn = document.getElementById('rules-btn');
             if(rulesBtn) rulesBtn.addEventListener('click', () => { 
-                triggerSmartLink(); // Earn money when they click rules
                 openModal(rulesModal); 
             });
 
             const referBtn = document.getElementById('refer-btn');
             if(referBtn) referBtn.addEventListener('click', () => { 
-                triggerSmartLink(); // Earn money when they click refer
                 openModal(referModal); 
             });
             
